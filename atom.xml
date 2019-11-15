@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/AllenAdom/allenwei.github.io/"/>
-  <updated>2019-09-26T05:13:10.000Z</updated>
+  <updated>2019-11-15T11:40:38.485Z</updated>
   <id>https://github.com/AllenAdom/allenwei.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>二零一七年终总结</title>
-    <link href="https://github.com/AllenAdom/allenwei.github.io/2018/01/22/2017-conclusion/"/>
-    <id>https://github.com/AllenAdom/allenwei.github.io/2018/01/22/2017-conclusion/</id>
-    <published>2018-01-22T04:32:09.000Z</published>
-    <updated>2019-09-26T05:13:10.000Z</updated>
+    <title>test</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/test/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/test/</id>
+    <published>2019-11-15T11:39:40.000Z</published>
+    <updated>2019-11-15T11:40:38.485Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,84 @@
       
         
         
-          &lt;div align=&quot;middle&quot;&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+          &lt;p&gt;哈哈哈哈哈哈&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>博客搭建</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-da-jian/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-da-jian/</id>
+    <published>2019-11-15T08:55:00.000Z</published>
+    <updated>2019-11-15T11:44:59.062Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;此博客搭建主要借助了 @&lt;a href=&quot;https://github.com/godweiyang&quot;&gt;韦阳&lt;/a&gt; @&lt;a href=&quot;https://github.com/blinkfox&quot;&gt;闪烁之狐&lt;/a&gt;，在此由衷的感谢他们。&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="博客搭建" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    
+      <category term="博客搭建" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typora使用技巧</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/typora-shi-yong-ji-qiao/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/typora-shi-yong-ji-qiao/</id>
+    <published>2019-11-15T08:18:31.000Z</published>
+    <updated>2019-11-15T08:32:43.416Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;使用Typora显示文本样式&quot;&gt;&lt;a href=&quot;#使用Typora显示文本样式&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="技巧" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="技巧" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客之路的起始</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-zhi-lu-de-qi-shi/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-zhi-lu-de-qi-shi/</id>
+    <published>2019-11-15T06:53:01.000Z</published>
+    <updated>2019-11-15T08:57:26.910Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在计算机这个专业已经快五年了，一直没有自己的博客，这次想搭一个，谨以此纪念本人博客的开始。&lt;/p&gt;
+&lt;h1 id=&quot;为什么要写博客&quot;&gt;&lt;a href=&quot;#为什么要写博客&quot; class=&quot;headerlink&quot;
         
       
     
