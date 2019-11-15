@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/AllenAdom/allenwei.github.io/"/>
-  <updated>2019-11-15T12:11:42.391Z</updated>
+  <updated>2019-11-15T13:18:25.313Z</updated>
   <id>https://github.com/AllenAdom/allenwei.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-da-jian/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-da-jian/</id>
     <published>2019-11-15T08:55:00.000Z</published>
-    <updated>2019-11-15T12:11:42.391Z</updated>
+    <updated>2019-11-15T13:18:25.313Z</updated>
     
     <summary type="html">
     
@@ -39,7 +39,9 @@
       <category term="博客搭建" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-      <category term="博客搭建" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+      <category term="博客" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="matery" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/matery/"/>
     
   </entry>
   
@@ -48,7 +50,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/typora-shi-yong-ji-qiao/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/typora-shi-yong-ji-qiao/</id>
     <published>2019-11-15T08:18:31.000Z</published>
-    <updated>2019-11-15T12:22:02.802Z</updated>
+    <updated>2019-11-15T13:18:06.381Z</updated>
     
     <summary type="html">
     
@@ -66,6 +68,8 @@
     
     
       <category term="技巧" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+      <category term="Typora" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/Typora/"/>
     
   </entry>
   
