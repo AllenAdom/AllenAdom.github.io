@@ -9,7 +9,8 @@
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
     <meta name="description" content="本文介绍如何在Mac下使用Maven编译Spark源码，并在Idea上调试运行
-环境准备Maven​    Maven的版本要保证不要太老，3.5.2就有点老了，使用mvn -v可查看maven版本。我自己是先更新了maven版本为3.5.">
+环境准备####Maven
+​    Maven的版本要保证不要太老，3.5.2就有点老了，使用mvn -v可查看maven版本。我自己是先更新了maven版本">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -434,7 +435,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    612
+                    614
                 </div>
                 
 
@@ -453,7 +454,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>本文介绍如何在Mac下使用Maven编译Spark源码，并在Idea上调试运行</p>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><h3 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h3><p>​    Maven的版本要保证不要太老，3.5.2就有点老了，使用<code>mvn -v</code>可查看maven版本。我自己是先更新了maven版本为3.5.4。所谓更新就是把原来的maven目录删除掉，用新下载的maven解压覆盖即可； 然后再修改相应的<strong>maven配置文件(${M2_HOME/conf/settings})</strong>和<strong>环境变量</strong>。我的maven安装位置为：<code>/usr/local/opt/maven-3.5.4</code>。</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>####Maven</p>
+<p>​    Maven的版本要保证不要太老，3.5.2就有点老了，使用<code>mvn -v</code>可查看maven版本。我自己是先更新了maven版本为3.5.4。所谓更新就是把原来的maven目录删除掉，用新下载的maven解压覆盖即可； 然后再修改相应的<strong>maven配置文件(${M2_HOME/conf/settings})</strong>和<strong>环境变量</strong>。我的maven安装位置为：<code>/usr/local/opt/maven-3.5.4</code>。</p>
 <h4 id="Scala"><a href="#Scala" class="headerlink" title="Scala"></a>Scala</h4><p>​    我们已经说明使用Spark 2.4.4，这个版本的spark默认依赖2.11.12的Scala，你当然也可以在<code>{spark dir}/pom.xml/&lt;scala.version&gt;</code>文件修改成你自己的Scala版本，但是建议使用原配。</p>
 <p>​    使用<code>scala -version</code>查看自己Scala版本，我的Scala安装在<code>/usr/local/opt/scala-2.11.12</code>， 值得一提的是Mac上可以配置环境变量的地方很多，我自己统一配置在了<code>~/.bash_profile</code>里面。</p>
 <h4 id="Spark-2-4-4源码"><a href="#Spark-2-4-4源码" class="headerlink" title="Spark 2.4.4源码"></a>Spark 2.4.4源码</h4><p>​    可以到<a href="https://spark.apache.org/downloads.html" target="_blank" rel="noopener">官网</a>下载，如下图：</p>
@@ -471,7 +473,10 @@
 </ul>
 <h3 id="在Idea中运行"><a href="#在Idea中运行" class="headerlink" title="在Idea中运行"></a>在Idea中运行</h3><ol>
 <li><p>使用Idea <code>open -&gt; 选择解压根目录下的pom.xml文件 -&gt; Open as Project</code>， 接下来等待idea扫描完整个项目。</p>
-<pre><code> 1. 使用 command + ; 打开Project Structure，找到`spark-examples_2.11`, 然后在右侧找到`Dependencies`， 检查一下Module SDK是不是你的Java版本，然后点击`+`， 选择`Jars or directories`, 找到`{spark dir}/spark/assembly/target/scala-2.11/jars/`。</code></pre></li>
+</li>
+<li><p>使用 command + ; 打开Project Structure，找到<code>spark-examples_2.11</code>, 然后在右侧找到<code>Dependencies</code>， 检查一下Module SDK是不是你的Java版本，然后点击<code>+</code>， 选择<code>Jars or directories</code>, </p>
+<p>  找到<code>{sparkdir}/spark/assembly/target/scala-2.11/jars/</code>，添加进去。</p>
+</li>
 <li><p>运行Spark示例程序</p>
 <p>找到<code>spark2。4.4 -&gt; examples -&gt;src -&gt; main -&gt; java -&gt; org.apache.spark.examples -&gt;JavaSparkPi</code>, 右键运行即可。</p>
 </li>
