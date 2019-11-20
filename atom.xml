@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/AllenAdom/allenwei.github.io/"/>
-  <updated>2019-11-15T13:18:25.313Z</updated>
+  <updated>2019-11-17T14:14:17.803Z</updated>
   <id>https://github.com/AllenAdom/allenwei.github.io/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Maven编译Idea运行Spark2-4-4-1</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/17/maven-bian-yi-idea-yun-xing-spark2-4-4/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/17/maven-bian-yi-idea-yun-xing-spark2-4-4/</id>
+    <published>2019-11-17T14:10:32.000Z</published>
+    <updated>2019-11-17T14:14:17.803Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文介绍如何在Mac下使用Maven编译Spark源码，并在Idea上调试运行&lt;/p&gt;
+&lt;h2 id=&quot;环境准备&quot;&gt;&lt;a href=&quot;#环境准备&quot; class=&quot;headerlink&quot; title=&quot;环境准备&quot;&gt;&lt;/a&gt;环境准备&lt;/h2&gt;&lt;h3 id=&quot;Maven&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Spark" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/Spark/"/>
+    
+    
+      <category term="Spark" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/Spark/"/>
+    
+      <category term="源码" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac快捷键</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/17/mac-kuai-jie-jian/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/17/mac-kuai-jie-jian/</id>
+    <published>2019-11-17T12:21:59.000Z</published>
+    <updated>2019-11-17T14:08:24.927Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;在find中显示隐藏文件和文件夹&lt;/th&gt;
+&lt;th&gt;command + shift +
+        
+      
+    
+    </summary>
+    
+      <category term="Mac" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title>博客搭建</title>
@@ -50,7 +109,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/typora-shi-yong-ji-qiao/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/typora-shi-yong-ji-qiao/</id>
     <published>2019-11-15T08:18:31.000Z</published>
-    <updated>2019-11-15T13:18:06.381Z</updated>
+    <updated>2019-11-17T13:54:52.412Z</updated>
     
     <summary type="html">
     
@@ -78,7 +137,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-zhi-lu-de-qi-shi/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-zhi-lu-de-qi-shi/</id>
     <published>2019-11-15T06:53:01.000Z</published>
-    <updated>2019-11-15T08:57:26.910Z</updated>
+    <updated>2019-11-17T13:33:00.748Z</updated>
     
     <summary type="html">
     
