@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://github.com/AllenAdom/allenwei.github.io/2019/12/13/flink-an-zhuang/</loc>
+    <lastmod>2019-12-13</lastmod>
+  </url>  <url>
+    <loc>https://github.com/AllenAdom/allenwei.github.io/2019/11/23/flink-xue-xi/</loc>
+    <lastmod>2019-11-23</lastmod>
+  </url>  <url>
     <loc>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-da-jian/</loc>
-    <lastmod>2019-11-20</lastmod>
+    <lastmod>2019-11-22</lastmod>
   </url>  <url>
     <loc>https://github.com/AllenAdom/allenwei.github.io/2019/11/17/maven-bian-yi-idea-yun-xing-spark2-4-4/</loc>
     <lastmod>2019-11-20</lastmod>

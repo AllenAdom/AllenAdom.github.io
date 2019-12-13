@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/AllenAdom/allenwei.github.io/"/>
-  <updated>2019-11-20T13:48:28.574Z</updated>
+  <updated>2019-12-13T07:16:51.979Z</updated>
   <id>https://github.com/AllenAdom/allenwei.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>flink安装</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2019/12/13/flink-an-zhuang/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2019/12/13/flink-an-zhuang/</id>
+    <published>2019-12-13T07:16:51.000Z</published>
+    <updated>2019-12-13T07:16:51.979Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flink学习</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/23/flink-xue-xi/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/23/flink-xue-xi/</id>
+    <published>2019-11-23T07:24:15.000Z</published>
+    <updated>2019-11-23T07:42:33.807Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;数据集类型-和-数据运算模型&quot;&gt;&lt;a href=&quot;#数据集类型-和-数据运算模型&quot; class=&quot;headerlink&quot; title=&quot;数据集类型 和 数据运算模型&quot;&gt;&lt;/a&gt;数据集类型 和 数据运算模型&lt;/h3&gt;&lt;h4 id=&quot;数据集类型&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Flink" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/Flink/"/>
+    
+    
+      <category term="Flink" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/Flink/"/>
+    
+      <category term="介绍" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E4%BB%8B%E7%BB%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>Maven编译Idea运行Spark2-4-4</title>
@@ -80,7 +122,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-da-jian/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/bo-ke-da-jian/</id>
     <published>2019-11-15T08:55:00.000Z</published>
-    <updated>2019-11-20T13:57:25.290Z</updated>
+    <updated>2019-11-22T12:37:09.959Z</updated>
     
     <summary type="html">
     
