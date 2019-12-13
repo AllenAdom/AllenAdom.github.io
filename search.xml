@@ -8,9 +8,27 @@
       <link href="/2019/12/13/flink-an-zhuang/"/>
       <url>/2019/12/13/flink-an-zhuang/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h3 id="Flink-Mac本机模式安装"><a href="#Flink-Mac本机模式安装" class="headerlink" title="Flink  Mac本机模式安装"></a>Flink  Mac本机模式安装</h3><h4 id="下载Flink"><a href="#下载Flink" class="headerlink" title="下载Flink"></a>下载Flink</h4><p>​    到<a href="https://flink.apache.org/downloads.html" target="_blank" rel="noopener">官网</a>上，选择自己适合的Scala版本的flink。比如我的Scala版本是2.11.10。</p><h4 id="解压运行"><a href="#解压运行" class="headerlink" title="解压运行"></a>解压运行</h4><ul><li><p>下载后解压到你想安装的目录下</p></li><li><p>配置系统环境变量：FLINK_HOME<img src="%E6%88%AA%E5%B1%8F2019-12-1315.28.10.png" alt="Flink环境变量配置"></p></li><li><p>进入<code>$FLINK_HOME/bin</code> 下，运行 <code>start-cluster.sh</code> 命令。</p></li><li><p>在浏览器登录<a href="http://localhost:8081" target="_blank" rel="noopener">http://localhost:8081</a></p><p><img src="%E6%88%AA%E5%B1%8F2019-12-1316.12.39.png" alt="flink单机运行截图"></p></li></ul><h3 id="Flink-集群安装（standalone模式）"><a href="#Flink-集群安装（standalone模式）" class="headerlink" title="Flink 集群安装（standalone模式）"></a>Flink 集群安装（standalone模式）</h3><h4 id="下载Flink-1"><a href="#下载Flink-1" class="headerlink" title="下载Flink"></a>下载Flink</h4><p>​    到<a href="https://flink.apache.org/downloads.html" target="_blank" rel="noopener">官网</a>上，选择自己适合的Scala版本的flink。比如我的Scala版本是2.11.10。</p><h4 id="解压配置"><a href="#解压配置" class="headerlink" title="解压配置"></a>解压配置</h4><ul><li><p>下载后解压到你想安装的目录下</p></li><li><p>配置系统环境变量：FLINK_HOME<img src="%E6%88%AA%E5%B1%8F2019-12-1315.37.31.png" alt="截屏2019-12-1315.37.31"></p></li><li><p>配置Flink，在<code>$FLINK_HOME/conf</code>目录下，修改<code>flink-conf.yaml</code>文件</p><table><thead><tr><th align="center">配置名称</th><th>参数</th><th>备注</th></tr></thead><tbody><tr><td align="center">jobmanager.rpc.address</td><td>sgmaster1</td><td>集群的master地址</td></tr><tr><td align="center">taskmanager.heap.size</td><td>2048</td><td>以M为单位</td></tr><tr><td align="center">jobmanager.heap.size</td><td>2048</td><td>以M为单位</td></tr><tr><td align="center">parallelism.default</td><td>2</td><td>并行度</td></tr><tr><td align="center"></td><td></td><td></td></tr></tbody></table></li><li><p>修改<code>master</code>和<code>slaves</code>文件</p><ul><li><p>master</p><p>sgmaster1</p></li><li><p>slaves(注意以行分隔)</p><p>sgmaster2</p><p>sgslave1</p><p>sgslave2</p><p>sgslave3</p></li></ul></li><li><p>分发flink文件夹到各个机器上</p><p>可用scp实现，也可以自己写一个脚本，用来集群之间传输文件。</p></li><li><p>启动flink</p><p>进入<code>$FLINK_HOME/bin</code> 下，运行 <code>start-cluster.sh</code> 命令。</p></li><li><p>在浏览器登录<a href="http://localhost:8081" target="_blank" rel="noopener">http://localhost:8081</a></p></li></ul>]]></content>
       
       
+      <categories>
+          
+          <category> Flink </category>
+          
+          <category> 大数据 </category>
+          
+          <category> HPC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Flink </tag>
+            
+            <tag> HPC </tag>
+            
+        </tags>
       
     </entry>
     
