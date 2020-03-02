@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>DL中遇到的名词解释</title>
+      <link href="/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/"/>
+      <url>/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/</url>
+      
+        <content type="html"><![CDATA[<p>hello</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 名词解释 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>flink安装</title>
       <link href="/2019/12/13/flink-an-zhuang/"/>
       <url>/2019/12/13/flink-an-zhuang/</url>
@@ -145,7 +170,7 @@
       <link href="/2019/11/15/typora-shi-yong-ji-qiao/"/>
       <url>/2019/11/15/typora-shi-yong-ji-qiao/</url>
       
-        <content type="html"><![CDATA[<h1 id="使用Typora显示文本样式"><a href="#使用Typora显示文本样式" class="headerlink" title="使用Typora显示文本样式"></a>使用Typora显示文本样式</h1><ol><li><p>输出无序序列和有序序列</p><p>*/+/- + 空格都可以输出无序序列</p><p>数字+. +空格，可以输出有序序列</p></li></ol><h1 id="Typora快捷键-For-Mac"><a href="#Typora快捷键-For-Mac" class="headerlink" title="Typora快捷键(For Mac)"></a>Typora快捷键(For Mac)</h1><ol><li><p>Option + Command + T</p><p>插入表格，会弹出选择要生成表格的行数和列数，如下图：</p><p><img src="%E6%88%AA%E5%B1%8F2019-11-1516.29.26.png" alt></p></li><li><p>插入超链接</p><p>复制要添加的超链接， 在文件中选择要附加超链接的文本，然后command + k 就可以了。</p><p>比如<a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a>， 我要给前面“百度”两个字添加百度的网址，就要先复制百度网址，然后选中前面的百度两个字，按下快捷键就可以了。</p><p><img src="%E6%88%AA%E5%B1%8F2019-11-1520.21.31.png" alt="插入超链接"></p><p>可以看到那俩字更白了，还有下划线。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="使用Typora显示文本样式"><a href="#使用Typora显示文本样式" class="headerlink" title="使用Typora显示文本样式"></a>使用Typora显示文本样式</h1><ol><li><p>输出无序序列和有序序列</p><p>*/+/- + 空格都可以输出无序序列</p><p>数字+. +空格，可以输出有序序列</p></li></ol><h1 id="Typora快捷键-For-Mac"><a href="#Typora快捷键-For-Mac" class="headerlink" title="Typora快捷键(For Mac)"></a>Typora快捷键(For Mac)</h1><ol><li><p>Option + Command + T</p><p>插入表格，会弹出选择要生成表格的行数和列数，如下图：</p><p><img src="%E6%88%AA%E5%B1%8F2019-11-1516.29.26.png" alt="插入表格"></p></li><li><p>插入超链接</p><p>复制要添加的超链接， 在文件中选择要附加超链接的文本，然后command + k 就可以了。</p><p>比如<a href="https://www.baidu.com/" target="_blank" rel="noopener">百度</a>， 我要给前面“百度”两个字添加百度的网址，就要先复制百度网址，然后选中前面的百度两个字，按下快捷键就可以了。</p><p><img src="%E6%88%AA%E5%B1%8F2019-11-1520.21.31.png" alt="插入超链接"></p><p>可以看到那俩字更白了，还有下划线。</p></li><li><p>输入上标和下标</p><p><img src="%E6%88%AA%E5%B1%8F2019-12-3110.02.54.png" alt="上标和下标"></p></li></ol>]]></content>
       
       
       <categories>

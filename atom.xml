@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/AllenAdom/allenwei.github.io/"/>
-  <updated>2019-12-13T08:13:33.122Z</updated>
+  <updated>2020-03-02T12:53:45.078Z</updated>
   <id>https://github.com/AllenAdom/allenwei.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DL中遇到的名词解释</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/</id>
+    <published>2020-03-02T12:52:35.000Z</published>
+    <updated>2020-03-02T12:53:45.078Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;hello&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="深度学习 名词解释" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
+    
+    
+      <category term="深度学习" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>flink安装</title>
@@ -169,7 +196,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/typora-shi-yong-ji-qiao/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/typora-shi-yong-ji-qiao/</id>
     <published>2019-11-15T08:18:31.000Z</published>
-    <updated>2019-11-17T13:54:52.412Z</updated>
+    <updated>2019-12-31T02:04:23.324Z</updated>
     
     <summary type="html">
     

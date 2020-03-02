@@ -4,13 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Maven编译Idea运行Spark2-4-4, HNU BigData HPC ML AllenWei 大数据 高性能计算">
+    <meta name="keywords" content="DL中遇到的名词解释, HNU BigData HPC ML AllenWei 大数据 高性能计算">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="本文介绍如何在Mac下使用Maven编译Spark源码，并在Idea上调试运行
-环境准备####Maven
-​    Maven的版本要保证不要太老，3.5.2就有点老了，使用mvn -v可查看maven版本。我自己是先更新了maven版本">
+    <meta name="description" content="hello
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Maven编译Idea运行Spark2-4-4 | Allen的博客</title>
+    <title>DL中遇到的名词解释 | Allen的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -276,13 +275,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Maven编译Idea运行Spark2-4-4
+                        DL中遇到的名词解释
                     </div>
                 </div>
             </div>
@@ -393,12 +392,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Spark/" target="_blank">
-                            <span class="chip bg-color">Spark</span>
-                        </a>
-                        
-                        <a href="/tags/源码/" target="_blank">
-                            <span class="chip bg-color">源码</span>
+                        <a href="/tags/深度学习/" target="_blank">
+                            <span class="chip bg-color">深度学习</span>
                         </a>
                         
                     </div>
@@ -409,8 +404,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Spark/" class="post-category" target="_blank">
-                            Spark
+                        <a href="/categories/深度学习-名词解释/" class="post-category" target="_blank">
+                            深度学习 名词解释
                         </a>
                         
                     </div>
@@ -421,7 +416,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-17
+                    2020-03-02
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -435,14 +430,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    614
+                    1
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    2 Min
+                    1 Min
                 </div>
                 
                 
@@ -453,35 +448,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文介绍如何在Mac下使用Maven编译Spark源码，并在Idea上调试运行</p>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>####Maven</p>
-<p>​    Maven的版本要保证不要太老，3.5.2就有点老了，使用<code>mvn -v</code>可查看maven版本。我自己是先更新了maven版本为3.5.4。所谓更新就是把原来的maven目录删除掉，用新下载的maven解压覆盖即可； 然后再修改相应的<strong>maven配置文件(${M2_HOME/conf/settings})</strong>和<strong>环境变量</strong>。我的maven安装位置为：<code>/usr/local/opt/maven-3.5.4</code>。</p>
-<h4 id="Scala"><a href="#Scala" class="headerlink" title="Scala"></a>Scala</h4><p>​    我们已经说明使用Spark 2.4.4，这个版本的spark默认依赖2.11.12的Scala，你当然也可以在<code>{spark dir}/pom.xml/&lt;scala.version&gt;</code>文件修改成你自己的Scala版本，但是建议使用原配。</p>
-<p>​    使用<code>scala -version</code>查看自己Scala版本，我的Scala安装在<code>/usr/local/opt/scala-2.11.12</code>， 值得一提的是Mac上可以配置环境变量的地方很多，我自己统一配置在了<code>~/.bash_profile</code>里面。</p>
-<h4 id="Spark-2-4-4源码"><a href="#Spark-2-4-4源码" class="headerlink" title="Spark 2.4.4源码"></a>Spark 2.4.4源码</h4><p>​    可以到<a href="https://spark.apache.org/downloads.html" target="_blank" rel="noopener">官网</a>下载，如下图：</p>
-<p><img src="%E6%88%AA%E5%B1%8F2019-11-1720.27.35.png" alt="Spark官网下载"></p>
-<p>​    也可以到<a href="https://github.com/apache/spark/tags">GitHub</a>上下载，点击要下载的版本，跳转到下载页面，选择一个压缩文件下载即可。</p>
-<p><img src="%E6%88%AA%E5%B1%8F2019-11-1720.33.20.png" alt="sparkGitHub下载"></p>
-<p>​    下载下来之后解压到一个工程目录就好。</p>
-<h3 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h3><p>​    这个自己下载安装即可。</p>
-<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>​    最开始我是解压完直接导入了idea中编译，结果就是折腾了很长时间都不能运行，直到现在我也没有解决，最后才决定先试用maven编译试一试，然后在idea中运行。</p>
-<p>​    使用maven编译很简单，在你解压的根目录下，命令行运行<code>mvn -T 4 -DskipTests clean package</code>, 接下来就是等待了，我用了15分钟。过程我提几点：</p>
-<ul>
-<li>很消耗CPU和内存资源，笔记本呼呼的吹</li>
-<li>maven要下载依赖包，这依赖于网速</li>
-<li>过程中会出现很多warnings，不用管</li>
-</ul>
-<h3 id="在Idea中运行"><a href="#在Idea中运行" class="headerlink" title="在Idea中运行"></a>在Idea中运行</h3><ol>
-<li><p>使用Idea <code>open -&gt; 选择解压根目录下的pom.xml文件 -&gt; Open as Project</code>， 接下来等待idea扫描完整个项目。</p>
-</li>
-<li><p>使用 command + ; 打开Project Structure，找到<code>spark-examples_2.11</code>, 然后在右侧找到<code>Dependencies</code>， 检查一下Module SDK是不是你的Java版本，然后点击<code>+</code>， 选择<code>Jars or directories</code>, </p>
-<p>  找到<code>{sparkdir}/spark/assembly/target/scala-2.11/jars/</code>，添加进去。</p>
-</li>
-<li><p>运行Spark示例程序</p>
-<p>找到<code>spark2。4.4 -&gt; examples -&gt;src -&gt; main -&gt; java -&gt; org.apache.spark.examples -&gt;JavaSparkPi</code>, 右键运行即可。</p>
-</li>
-</ol>
-<p>​    </p>
+                <p>hello</p>
 
             </div>
             <hr />
@@ -640,9 +607,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Maven编译Idea运行Spark2-4-4》
+                    《DL中遇到的名词解释》
                 </span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/17/maven-bian-yi-idea-yun-xing-spark2-4-4/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Allen
             </a> is licensed under a
@@ -683,7 +650,7 @@
         repo: 'AllenAdom.github.io',
         owner: 'AllenAdom',
         admin: "AllenAdom",
-        id: '2019/11/17/maven-bian-yi-idea-yun-xing-spark2-4-4/',
+        id: '2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -966,50 +933,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/11/23/flink-xue-xi/">
+                <a href="/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Flink学习">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="DL中遇到的名词解释">
                         
-                        <span class="card-title">Flink学习</span>
+                        <span class="card-title">DL中遇到的名词解释</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录Flink学习历程
+                            汇总在学习DL中遇到的名词解释
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Flink/" class="post-category" target="_blank">
-                                    Flink
+                            <a href="/categories/深度学习-名词解释/" class="post-category" target="_blank">
+                                    深度学习 名词解释
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Flink/" target="_blank">
-                        <span class="chip bg-color">Flink</span>
-                    </a>
-                    
-                    <a href="/tags/介绍/" target="_blank">
-                        <span class="chip bg-color">介绍</span>
+                    <a href="/tags/深度学习/" target="_blank">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
                 </div>
@@ -1023,31 +988,39 @@
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/17/mac-kuai-jie-jian/">
+                <a href="/2019/12/13/flink-an-zhuang/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Mac快捷键">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="flink安装">
                         
-                        <span class="card-title">Mac快捷键</span>
+                        <span class="card-title">flink安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文记录Mac下快捷键
+                            本文记录flink的安装过程。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-17
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-12-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Mac/" class="post-category" target="_blank">
-                                    Mac
+                            <a href="/categories/Flink/" class="post-category" target="_blank">
+                                    Flink
+                                </a>
+                            
+                            <a href="/categories/Flink/大数据/" class="post-category" target="_blank">
+                                    大数据
+                                </a>
+                            
+                            <a href="/categories/Flink/大数据/HPC/" class="post-category" target="_blank">
+                                    HPC
                                 </a>
                             
                             
@@ -1057,8 +1030,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Mac/" target="_blank">
-                        <span class="chip bg-color">Mac</span>
+                    <a href="/tags/Flink/" target="_blank">
+                        <span class="chip bg-color">Flink</span>
+                    </a>
+                    
+                    <a href="/tags/HPC/" target="_blank">
+                        <span class="chip bg-color">HPC</span>
                     </a>
                     
                 </div>
