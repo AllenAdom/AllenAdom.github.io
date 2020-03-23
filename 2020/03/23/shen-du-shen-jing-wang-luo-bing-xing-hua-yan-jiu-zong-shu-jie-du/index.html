@@ -4,13 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Maven编译Idea运行Spark2-4-4, HNU BigData HPC ML AllenWei 大数据 高性能计算">
+    <meta name="keywords" content="深度神经网络并行化研究综述-解读, HNU BigData HPC ML AllenWei 大数据 高性能计算">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
-    <meta name="description" content="本文介绍如何在Mac下使用Maven编译Spark源码，并在Idea上调试运行
-环境准备####Maven
-​    Maven的版本要保证不要太老，3.5.2就有点老了，使用mvn -v可查看maven版本。我自己是先更新了maven版本">
+    <meta name="description" content="《深度神经网络并行化研究综述》论文出处，点击此链接。
+摘要该文首先介绍了深度神经网络发展背景和常用的计算模型，然后对多核处理器、众核处理器和异构计算设备分别从功耗、计算能力、并行算法的开发难度等角度进行对比分析，接着对并行编程框架分别从支持">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Maven编译Idea运行Spark2-4-4 | Allen的博客</title>
+    <title>深度神经网络并行化研究综述-解读 | Allen的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -276,13 +275,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Maven编译Idea运行Spark2-4-4
+                        深度神经网络并行化研究综述-解读
                     </div>
                 </div>
             </div>
@@ -393,12 +392,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Spark/" target="_blank">
-                            <span class="chip bg-color">Spark</span>
-                        </a>
-                        
-                        <a href="/tags/源码/" target="_blank">
-                            <span class="chip bg-color">源码</span>
+                        <a href="/tags/论文记录-深度神经网络-并行化/" target="_blank">
+                            <span class="chip bg-color">论文记录 深度神经网络 并行化</span>
                         </a>
                         
                     </div>
@@ -409,8 +404,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Spark/" class="post-category" target="_blank">
-                            Spark
+                        <a href="/categories/论文记录/" class="post-category" target="_blank">
+                            论文记录
                         </a>
                         
                     </div>
@@ -421,7 +416,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-17
+                    2020-03-23
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -435,14 +430,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    614
+                    2.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    2 Min
+                    8 Min
                 </div>
                 
                 
@@ -453,35 +448,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文介绍如何在Mac下使用Maven编译Spark源码，并在Idea上调试运行</p>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>####Maven</p>
-<p>​    Maven的版本要保证不要太老，3.5.2就有点老了，使用<code>mvn -v</code>可查看maven版本。我自己是先更新了maven版本为3.5.4。所谓更新就是把原来的maven目录删除掉，用新下载的maven解压覆盖即可； 然后再修改相应的<strong>maven配置文件(${M2_HOME/conf/settings})</strong>和<strong>环境变量</strong>。我的maven安装位置为：<code>/usr/local/opt/maven-3.5.4</code>。</p>
-<h4 id="Scala"><a href="#Scala" class="headerlink" title="Scala"></a>Scala</h4><p>​    我们已经说明使用Spark 2.4.4，这个版本的spark默认依赖2.11.12的Scala，你当然也可以在<code>{spark dir}/pom.xml/&lt;scala.version&gt;</code>文件修改成你自己的Scala版本，但是建议使用原配。</p>
-<p>​    使用<code>scala -version</code>查看自己Scala版本，我的Scala安装在<code>/usr/local/opt/scala-2.11.12</code>， 值得一提的是Mac上可以配置环境变量的地方很多，我自己统一配置在了<code>~/.bash_profile</code>里面。</p>
-<h4 id="Spark-2-4-4源码"><a href="#Spark-2-4-4源码" class="headerlink" title="Spark 2.4.4源码"></a>Spark 2.4.4源码</h4><p>​    可以到<a href="https://spark.apache.org/downloads.html" target="_blank" rel="noopener">官网</a>下载，如下图：</p>
-<p><img src="%E6%88%AA%E5%B1%8F2019-11-1720.27.35.png" alt="Spark官网下载"></p>
-<p>​    也可以到<a href="https://github.com/apache/spark/tags">GitHub</a>上下载，点击要下载的版本，跳转到下载页面，选择一个压缩文件下载即可。</p>
-<p><img src="%E6%88%AA%E5%B1%8F2019-11-1720.33.20.png" alt="sparkGitHub下载"></p>
-<p>​    下载下来之后解压到一个工程目录就好。</p>
-<h3 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h3><p>​    这个自己下载安装即可。</p>
-<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>​    最开始我是解压完直接导入了idea中编译，结果就是折腾了很长时间都不能运行，直到现在我也没有解决，最后才决定先试用maven编译试一试，然后在idea中运行。</p>
-<p>​    使用maven编译很简单，在你解压的根目录下，命令行运行<code>mvn -T 4 -DskipTests clean package</code>, 接下来就是等待了，我用了15分钟。过程我提几点：</p>
-<ul>
-<li>很消耗CPU和内存资源，笔记本呼呼的吹</li>
-<li>maven要下载依赖包，这依赖于网速</li>
-<li>过程中会出现很多warnings，不用管</li>
-</ul>
-<h3 id="在Idea中运行"><a href="#在Idea中运行" class="headerlink" title="在Idea中运行"></a>在Idea中运行</h3><ol>
-<li><p>使用Idea <code>open -&gt; 选择解压根目录下的pom.xml文件 -&gt; Open as Project</code>， 接下来等待idea扫描完整个项目。</p>
+                <h2 id="《深度神经网络并行化研究综述》"><a href="#《深度神经网络并行化研究综述》" class="headerlink" title="《深度神经网络并行化研究综述》"></a><center>《深度神经网络并行化研究综述》</center></h2><p>论文出处，点击此<a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2018&filename=JSJX201808011&uid=WEEvREcwSlJHSldRa1Fhb09pSnNvVXIyNnJIeC92dW9MQWFIUHJCckJVST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=Mjk1NzdydkpMejdCZHJHNEg5bk1wNDlFWllSOGVYMUx1eFlTN0RoMVQzcVRyV00xRnJDVVI3cWZaT1JzRnkvbFY=" target="_blank" rel="noopener">链接</a>。</p>
+<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>该文首先介绍了深度神经网络发展背景和常用的计算模型，然后对<strong>多核处理器、众核处理器和异构计算设备</strong>分别从功耗、计算能力、并行算法的开发难度等角度进行对比分析，接着对<strong>并行编程框架</strong>分别从支持的编程语言和硬件设备、编程难度等角度进行阐述。 然后<strong>以AlexNet为例</strong>分析了深度神经网络模型并行和数据并行两种方法的实施过程。接下来，从支持硬件、并行接口、并行模式等角度比较了常用的<strong>深度神经网络开源软件</strong>，并且通过<strong>实验比较和分析</strong>了卷积神经网 络在多核CPU和GPU上的并行性能。最后，对并行深度神经网络的未来发展趋势和面临的挑战进行<strong>展望</strong> 。</p>
+<h4 id="硬件架构"><a href="#硬件架构" class="headerlink" title="硬件架构"></a>硬件架构</h4><p>． 计算能力指标，一般使用<strong>FLOPS</strong> 即每秒执行的32位浮点(FP32) 运算次数。CPU 计算性能一般采用的指标为每秒十亿次浮点运算 （ Giga Floating Point Oprations Per Second，GFLOPS ）和每秒万亿次浮点运算（ Tera Floating Point Oprations Per Second）。</p>
+<h5 id="多核CPU"><a href="#多核CPU" class="headerlink" title="多核CPU"></a>多核CPU</h5><p>随着频率墙、<a href="https://zhidao.baidu.com/question/1696234362620387388.html" target="_blank" rel="noopener">功耗墙</a>和<a href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98%E5%A2%99/445399?fr=aladdin" target="_blank" rel="noopener">存储墙</a>问题越来越突出，单核CPU很难继续通过提高 钟频率来提升性能， 因此具有多核结构的计算设备逐渐成为主流。多核结构指的是在同一个处理器上集成两个或两个以上的<strong>计算内核</strong>，不同计算内核之间相互独立，可以并行的执行指令。</p>
+<h5 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h5><p>GPU是以大量线程并行执行面向高吞吐量的设计，具有高带宽、高并行性的特点，因此GPU适用于大量数据的并行计算。</p>
+<h5 id="MIC架构-Intel-Many-Integrated-Core"><a href="#MIC架构-Intel-Many-Integrated-Core" class="headerlink" title="MIC架构(Intel Many Integrated Core)"></a>MIC架构(Intel Many Integrated Core)</h5><p>可直接参考<a href="https://www.cnblogs.com/qysqys/p/5184209.html" target="_blank" rel="noopener">链接</a>。</p>
+<h5 id="ASIC-Application-Specific-Integrated-Circuit"><a href="#ASIC-Application-Specific-Integrated-Circuit" class="headerlink" title="ASIC (Application Specific Integrated Circuit)"></a>ASIC (Application Specific Integrated Circuit)</h5><p>是指应特定用户要求和特定电子系统的需要而设计、制造的集成电路。 为了最大计算速度和最小化能量消耗，针对深度学习设计专用集成电路，并将其应用于大规模云计算数据中心和嵌入式计算设备成为热门研究方向。</p>
+<h5 id="FPGA-Field－Programmable-Gate-Array"><a href="#FPGA-Field－Programmable-Gate-Array" class="headerlink" title="FPGA(Field－Programmable Gate Array)"></a>FPGA(Field－Programmable Gate Array)</h5><p>FPGA就是一个可以通过编程来改变内部结构的芯片，在本质上是一个硬件上的可编程的器件。对比ASIC来说，因为ASIC芯片只是针对某一项功能做的专用芯片，如果要完成其他的功能就还得做一个另外的专用ASIC芯片，这样就大大的增加时间成本和人力成本，因为一个芯片的生产周期较长而且验证也是相当复杂的。FPGA就是为了解决上面的问题而出现的。</p>
+<p><img src="%E6%88%AA%E5%B1%8F2020-03-2322.26.29.png" alt="硬件架构对比分析"></p>
+<h4 id="并行编程架构"><a href="#并行编程架构" class="headerlink" title="并行编程架构"></a>并行编程架构</h4><h5 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h5><p>运行在NVIDIA本公司GPU上的并行编程语言。</p>
+<h5 id="OpenCL"><a href="#OpenCL" class="headerlink" title="OpenCL"></a>OpenCL</h5><p>是Khronos组织制定的异构计算统一编程标准。因此可以运行在多核CPU 、 GPU、DSP、FPGA以及异构加速处理单元上。</p>
+<h5 id="OpenMP"><a href="#OpenMP" class="headerlink" title="OpenMP"></a>OpenMP</h5><p>是基于<strong>共享内存</strong>和<strong>多线程</strong>的并行编程模型，在使用时需要程序员在程序可用于并行的部分添加并行编译的关键字，运行环境依据关键字将计算任务映射到多线程上并行执行。</p>
+<h5 id="MPI"><a href="#MPI" class="headerlink" title="MPI"></a>MPI</h5><p>是一种基于消息传递的并行程序编程框架。作为一个跨语言的通讯协议，MPI支持点对点和广播两种通讯方式。但是基于MPI 的并行程序通常在算法上有较大改动，编程难度较大， 并且容错性不足，如果一个进程出现问题导致整个 应用需要重新进行计算。</p>
+<h4 id="深度神经网络的模型并行和数据并行"><a href="#深度神经网络的模型并行和数据并行" class="headerlink" title="深度神经网络的模型并行和数据并行"></a>深度神经网络的模型并行和数据并行</h4><h5 id="模型并行"><a href="#模型并行" class="headerlink" title="模型并行"></a>模型并行</h5><p>模型并行（图5（a））是指将网络模型分解到各个计算设备上， 依靠设备间的共同协作完成训练。多数情况下，模型并行带来的<strong>通信开销和同步开销</strong>超过数据并行，因此加速比也不及数据并行， 但是对于单个计算设备内存无 法 容纳的大 模型来 说，模型并行是一个很好的选择。</p>
+<h5 id="数据并行"><a href="#数据并行" class="headerlink" title="数据并行"></a>数据并行</h5><p>数据并行（图5（b））是指对训练数据做切分，同时采用多个模型实例，对多个分片的数据并行训练，由参数服务器来完成参数交换。在训练过程中，多个训练过程相互独 立，模型的变化量 Δｗ 需要传输给参数服务器， 由参数服务器负责更新为最新的模型 <em>ｗ′＝ｗ － η  · Δｗ</em>,其中<em>η</em>为学习率，然后再将最新的模型<em>ｗ′</em> 分发给训练程序。</p>
+<p><img src="%E6%88%AA%E5%B1%8F2020-03-2322.43.10.png" alt="模型并行和数据并行"></p>
+<h5 id="随机梯度下降法"><a href="#随机梯度下降法" class="headerlink" title="随机梯度下降法"></a>随机梯度下降法</h5><p>在深度神经网络中，为了求解代价函数，需要使用优化算法。目前最常用的优化算法是梯度下降法。该算法的核心是最小化目标函数，在每次迭代中，对每个变量按照目标函数在该变量梯度的相反方向更新对应的参数值，其中，参数学习率决定了函数到达最小值的迭代次数。</p>
+<p>随机梯度下降算法（SGD）由于 速度快、效果可靠等优点在深度神经网络算法中得到了普遍应用。目前主要有同步 SGD和异步SGD两种机制。． 同步SGD需要利用所有节点上的参数信息，而慢节点所带来的同步 等待使得数据并行时的加速比并不理想。SGD异步虽然单次训练速度快，但是其固有的随机性使得网 络在训练过程中达到相同收敛点耗费的时间更长，且在训练后期可能会出现震荡现象。针对两者，论文中提到了有学者提出了相应<strong>缓解</strong>方法。</p>
+<h4 id="深度神经网络开源软件系统并行化方法"><a href="#深度神经网络开源软件系统并行化方法" class="headerlink" title="深度神经网络开源软件系统并行化方法"></a>深度神经网络开源软件系统并行化方法</h4><p>Caffe、TensorFlow、MXNet、CNTK、PTorch、Theano这些软件对深度神经网络并行时使用了一些 相 似 的方法，在CPU上都使用了高性能多线程库来对网络进行训练，GPU在上都支持cuDNN（对CNN做一些GPU矩阵计算的优化）来对网络进行加速。在分布式并行深度神经网络的实现上，使用了数据并行或模型并行。</p>
+<p><strong>论文中</strong>对上述软件都做了简要分析。</p>
+<p><img src="%E6%88%AA%E5%B1%8F2020-03-2323.03.29.png" alt="分析表"></p>
+<h4 id="深度神经网络并行化研究现状"><a href="#深度神经网络并行化研究现状" class="headerlink" title="深度神经网络并行化研究现状"></a>深度神经网络并行化研究现状</h4><h5 id="GPU-1"><a href="#GPU-1" class="headerlink" title="GPU"></a>GPU</h5><p>使用GPU来加速深度神经网络算法的训练过 程，一 般是使用CUDA或OpenCL将算法移植在GPU上，通过数据并行或模型并行，或者采用两者相结合的方法并行加速。</p>
+<h5 id="MIC"><a href="#MIC" class="headerlink" title="MIC"></a>MIC</h5><p>使用MIC对深度神经网络训练过程并行加速时，一般使用OpenMP并行编程语言。将算法中的循环部分通过OpenMP和向量化指令做多线程和SIMD并行。</p>
+<h5 id="ASIC"><a href="#ASIC" class="headerlink" title="ASIC"></a>ASIC</h5><p>设计专用加速器时，一般是通过分析算法特性，为其设计相应的硬件电路，充分利用算法中可并行的部分，为其中相应的操作分配具体的计算元件，从而获得更高的加速效果。</p>
+<h5 id="FPGA"><a href="#FPGA" class="headerlink" title="FPGA"></a>FPGA</h5><p>开发难度大。</p>
+<h5 id="多节点并行化"><a href="#多节点并行化" class="headerlink" title="多节点并行化"></a>多节点并行化</h5><p>集群分布式工作。</p>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>上述5个方面，论文中都有举例。值得注意的是使用4块GPU可能比使用单GPU只提高了2x的加速比。</p>
+<h4 id="深度神经网络并行化的挑战和展望"><a href="#深度神经网络并行化的挑战和展望" class="headerlink" title="深度神经网络并行化的挑战和展望"></a>深度神经网络并行化的挑战和展望</h4><h5 id="基于OpenCL的并行深度神经网络算法的性能可移植性"><a href="#基于OpenCL的并行深度神经网络算法的性能可移植性" class="headerlink" title="基于OpenCL的并行深度神经网络算法的性能可移植性"></a>基于OpenCL的并行深度神经网络算法的性能可移植性</h5><h5 id="深度神经网络模型并行中任务的自动划分"><a href="#深度神经网络模型并行中任务的自动划分" class="headerlink" title="深度神经网络模型并行中任务的自动划分"></a>深度神经网络模型并行中任务的自动划分</h5><p>已有的研究成果表明深度神经网络模型并行化 主要针对已设计好的神经网络结构采用手工划分网 络并将其映射到不同的计算设备上，手工划分网络 由于对任务负载的运行时间估计不够精准容易导致 计算节点上的负载不均衡。</p>
+<h5 id="深度神经网络数据并行面临挑战"><a href="#深度神经网络数据并行面临挑战" class="headerlink" title="深度神经网络数据并行面临挑战"></a>深度神经网络数据并行面临挑战</h5><p>对于深度神经网络数据并行未来发展的趋势， 可从两个方向出发：第一是从算法角度，设计收敛速度快通信代价低的分布式随机梯度下降算法；第二是解决集群中不同节点间的通信瓶颈问题。</p>
+<ol>
+<li><p>多节点之间参数更新方式的选择</p>
+<p>在保证算法精度和收敛速 度的前提下，减少同步等待所带来的开销。</p>
 </li>
-<li><p>使用 command + ; 打开Project Structure，找到<code>spark-examples_2.11</code>, 然后在右侧找到<code>Dependencies</code>， 检查一下Module SDK是不是你的Java版本，然后点击<code>+</code>， 选择<code>Jars or directories</code>, </p>
-<p>  找到<code>{sparkdir}/spark/assembly/target/scala-2.11/jars/</code>，添加进去。</p>
-</li>
-<li><p>运行Spark示例程序</p>
-<p>找到<code>spark2。4.4 -&gt; examples -&gt;src -&gt; main -&gt; java -&gt; org.apache.spark.examples -&gt;JavaSparkPi</code>, 右键运行即可。</p>
+<li><p>异构计算节点间通信瓶颈</p>
+<p>减少通信代价和保证算法收敛性之间的平衡成为关键。</p>
 </li>
 </ol>
-<p>​    </p>
+<h5 id="基于新形态计算机的深度神经网络加速研究"><a href="#基于新形态计算机的深度神经网络加速研究" class="headerlink" title="基于新形态计算机的深度神经网络加速研究"></a>基于新形态计算机的深度神经网络加速研究</h5><h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>首先该文是综述，给我们科普了一些内容。其中我觉得有意思的点是<strong>压缩神经网络</strong> 和 <strong>使用规约树算法提高了参数交换的效率和可扩展性</strong>。</p>
 
             </div>
             <hr />
@@ -640,9 +644,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Maven编译Idea运行Spark2-4-4》
+                    《深度神经网络并行化研究综述-解读》
                 </span> by
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/11/17/maven-bian-yi-idea-yun-xing-spark2-4-4/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/03/23/shen-du-shen-jing-wang-luo-bing-xing-hua-yan-jiu-zong-shu-jie-du/" property="cc:attributionName"
                rel="cc:attributionURL">
                 Allen
             </a> is licensed under a
@@ -683,7 +687,7 @@
         repo: 'AllenAdom.github.io',
         owner: 'AllenAdom',
         admin: "AllenAdom",
-        id: '2019/11/17/maven-bian-yi-idea-yun-xing-spark2-4-4/',
+        id: '2020/03/23/shen-du-shen-jing-wang-luo-bing-xing-hua-yan-jiu-zong-shu-jie-du/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -966,50 +970,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/11/23/flink-xue-xi/">
+                <a href="/2020/03/23/shen-du-shen-jing-wang-luo-bing-xing-hua-yan-jiu-zong-shu-jie-du/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Flink学习">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="深度神经网络并行化研究综述-解读">
                         
-                        <span class="card-title">Flink学习</span>
+                        <span class="card-title">深度神经网络并行化研究综述-解读</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录Flink学习历程
+                            《深度神经网络并行化研究综述》论文记录
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Flink/" class="post-category" target="_blank">
-                                    Flink
+                            <a href="/categories/论文记录/" class="post-category" target="_blank">
+                                    论文记录
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Flink/" target="_blank">
-                        <span class="chip bg-color">Flink</span>
-                    </a>
-                    
-                    <a href="/tags/介绍/" target="_blank">
-                        <span class="chip bg-color">介绍</span>
+                    <a href="/tags/论文记录-深度神经网络-并行化/" target="_blank">
+                        <span class="chip bg-color">论文记录 深度神经网络 并行化</span>
                     </a>
                     
                 </div>
@@ -1023,31 +1025,31 @@
                 Next&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/17/mac-kuai-jie-jian/">
+                <a href="/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Mac快捷键">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="DL中遇到的名词解释">
                         
-                        <span class="card-title">Mac快捷键</span>
+                        <span class="card-title">DL中遇到的名词解释</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文记录Mac下快捷键
+                            汇总在学习DL中遇到的名词解释
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-17
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Mac/" class="post-category" target="_blank">
-                                    Mac
+                            <a href="/categories/深度学习-名词解释/" class="post-category" target="_blank">
+                                    深度学习 名词解释
                                 </a>
                             
                             
@@ -1057,8 +1059,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Mac/" target="_blank">
-                        <span class="chip bg-color">Mac</span>
+                    <a href="/tags/深度学习/" target="_blank">
+                        <span class="chip bg-color">深度学习</span>
                     </a>
                     
                 </div>
