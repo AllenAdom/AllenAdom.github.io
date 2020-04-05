@@ -274,7 +274,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -429,14 +429,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.5k
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    5 Min
+                    10 Min
                 </div>
                 
                 
@@ -475,11 +475,58 @@
 </li>
 </ol>
 <h5 id="目标函数、损失函数、代价函数"><a href="#目标函数、损失函数、代价函数" class="headerlink" title="* 目标函数、损失函数、代价函数"></a>* 目标函数、损失函数、代价函数</h5><p>损失函数（loss function）和代价函数（cost function）是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数。</p>
-<h5 id="正则化-regularization-和正则化率"><a href="#正则化-regularization-和正则化率" class="headerlink" title="* 正则化(regularization)和正则化率"></a>* 正则化(regularization)和正则化率</h5><p><img src="%E6%88%AA%E5%B1%8F2020-03-1012.26.09.png" alt="正则化和正则化率"></p>
+<h5 id="正则化和正则化率"><a href="#正则化和正则化率" class="headerlink" title="* 正则化和正则化率"></a>* 正则化和正则化率</h5><p><img src="%E6%88%AA%E5%B1%8F2020-03-1012.26.09.png" alt="正则化和正则化率"></p>
 <p><img src="%E6%88%AA%E5%B1%8F2020-03-1012.32.08.png" alt="L1和L2"></p>
 <h5 id="什么是dropout"><a href="#什么是dropout" class="headerlink" title="* 什么是dropout"></a>* 什么是dropout</h5><p>dropout是指在深度学习网络的训练过程中，对于神经网络单元，按照一定的概率将其暂时从网络中丢弃。注意是暂时，对于随机梯度下降来说，由于是随机丢弃，故而每一个mini-batch都在训练不同的网络。</p>
 <h5 id="Boosting-Algorithm"><a href="#Boosting-Algorithm" class="headerlink" title="* Boosting Algorithm"></a>* Boosting Algorithm</h5><p>提升方法是基于这样一种思想：对于一个复杂任务来说，将多个专家的判断进行适当的综合所得出的判断，要比其中任何一个专家单独的判断好。通俗点说，就是”三个臭皮匠顶个诸葛亮”。</p>
 <p><a href="https://www.cnblogs.com/linyuanzhou/p/5019166.html" target="_blank" rel="noopener">可参考</a></p>
+<h5 id="什么是梯度？"><a href="#什么是梯度？" class="headerlink" title="* 什么是梯度？"></a>* 什么是梯度？</h5><p>在介绍梯度之前我们要先回顾一下<strong>偏导数</strong>和<strong>方向导数</strong>的概念，因为梯度是基于这两个概念提出来的。</p>
+<h6 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h6><p>一个多变量的函数的偏导数是它关于其中一个变量的导数，而保持其他变量恒定。例如： <em>f<sub>x</sub>(x, y)</em> 指的是函数在y方向不变，函数值沿着x轴方向的导数。</p>
+<h6 id="方向导数"><a href="#方向导数" class="headerlink" title="方向导数"></a>方向导数</h6><p>但是偏导数有一个缺点，就是只能表示多元函数沿坐标轴方向的变化率，但是很多时候要考虑多元函数沿任意方向的变化率，于是就有了方向导数。</p>
+<p>某个方向的导数，本质就是函数在A点上该方向切线的斜率；每个切线都代表一个方向，每个方向都是有方向导数的。</p>
+<h6 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h6><p>梯度是针对某一点P的梯度，是一个向量<em>A</em>，它表示在点P的<em>A</em>方向上的函数变化最快，方向导数最大。当我们找到了这个向量<em>A</em>，就说是该点P的梯度。梯度是方向导数中的<strong>最大值</strong>，梯度一定是函数上升的方向， 最小值为0。</p>
+<p>梯度下降法就是沿着梯度下降的方向求解极小值，梯度上升法沿就是着梯度上升的方向可以求得最大值。</p>
+<p>什么叫梯度下降的方向？因为梯度本身有方向，所以梯度方向的负方向就是梯度下降的方向。同理，梯度上升的方向。</p>
+<p>可<a href="https://www.cnblogs.com/ybjourney/p/12508027.html" target="_blank" rel="noopener">参考1</a>，<a href="https://zhuanlan.zhihu.com/p/24913912" target="_blank" rel="noopener">参考2</a>。</p>
+<h5 id="池化层"><a href="#池化层" class="headerlink" title="* 池化层"></a>* 池化层</h5><p>池化层主要的作用：<br>（1）首要作用，<strong>下采样</strong>（downsamping）</p>
+<iframe height="300" width="300" src="pooling_layer.mp4"></iframe>
+
+<p>（2）降维、去除冗余信息、对特征进行压缩、简化网络复杂度、减小计算量、减小内存消耗等等。各种说辞吧，总的理解就是减少参数量。</p>
+<p>（3）实现非线性（这个可以想一下，relu函数，是不是有点类似的感觉？）。</p>
+<p>（4）可以扩大感知野。</p>
+<p>（5）可以实现不变性，其中不变形性包括，平移不变性、旋转不变性和尺度不变性。</p>
+<h5 id="CNN中卷积层计算细节"><a href="#CNN中卷积层计算细节" class="headerlink" title="* CNN中卷积层计算细节"></a>* CNN中卷积层计算细节</h5><p>参考 知乎<a href="https://zhuanlan.zhihu.com/p/29119239" target="_blank" rel="noopener">Michael Yuan</a></p>
+<h6 id="卷积层尺寸的计算原理"><a href="#卷积层尺寸的计算原理" class="headerlink" title="卷积层尺寸的计算原理"></a>卷积层尺寸的计算原理</h6><ul>
+<li><p><strong>输入矩阵</strong>格式：四个维度，依次为：样本数、图像高度、图像宽度、图像通道数</p>
+</li>
+<li><p><strong>输出矩阵</strong>格式：与输出矩阵的维度顺序和含义相同，但是后三个维度（图像高度、图像宽度、图像通道数）的尺寸发生变化。</p>
+</li>
+<li><p><strong>权重矩阵</strong>（卷积核）格式：同样是四个维度，但维度的含义与上面两者都不同，为：卷积核高度、卷积核宽度、输入通道数、输出通道数（等于卷积核个数）</p>
+</li>
+<li><p><strong>输入矩阵、权重矩阵、输出矩阵这三者之间的相互决定关系</strong></p>
+<ul>
+<li><p><strong>卷积核的输入通道数</strong>（in depth）由<strong>输入矩阵的通道数</strong>所决定。（红色标注）</p>
+</li>
+<li><p><strong>输出矩阵的通道数</strong>（out depth）由<strong>卷积核的输出通道数</strong>所决定。（绿色标注）</p>
+</li>
+<li><p><strong>输出矩阵的高度和宽度</strong>（height, width）这两个维度的尺寸由输入矩阵、卷积核、扫描方式所共同决定。计算公式如下。（蓝色标注)</p>
+<p><img src="equation-5053801.svg" alt="输出矩阵的高度和宽度计算公式"></p>
+<p><font color="gray">* 注：以下计算演示均省略掉了 Bias ，严格来说其实每个卷积核都还有一个 Bias 参数。</font></p>
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="标准卷积计算举例"><a href="#标准卷积计算举例" class="headerlink" title="标准卷积计算举例"></a>标准卷积计算举例</h6><blockquote>
+<p>以 AlexNet 模型的第一个卷积层为例，<br>- 输入图片的尺寸统一为 227 x 227 x 3 （高度 x 宽度 x 颜色通道数），<br>- 本层一共具有96个卷积核，<br>- 每个卷积核的尺寸都是 11 x 11 x 3。<br>- 已知 stride = 4， padding = 0，<br>- 假设 batch_size = 256，<br>- 则输出矩阵的高度/宽度为 (227 - 11) / 4 + 1 = 55</p>
+</blockquote>
+<p><img src="equation-1.svg" alt="标准卷积计算举例"></p>
+<h5 id="heuristic-based-method"><a href="#heuristic-based-method" class="headerlink" title="* heuristic-based method"></a>* heuristic-based method</h5><p>什么叫启发式的方法，就是经验论，根据经验规则进行发现的方法。</p>
+<h5 id="集成学习-Ensemble-learing"><a href="#集成学习-Ensemble-learing" class="headerlink" title="* 集成学习(Ensemble learing)"></a>* 集成学习(Ensemble learing)</h5><p>集成学习算法是机器学习的一种新的学 习思想，该学习算法把同一个问题分解到多个不同的模块中，由多个学习器一起参与 学习，共同解决目标问题，从而提高分类器的泛化能力。</p>
+<h5 id="非平衡数据"><a href="#非平衡数据" class="headerlink" title="* 非平衡数据"></a>* 非平衡数据</h5><p>非平衡数据是指数据集中某一类的<strong>样本数量明显少于其他类样本</strong>的数目，其中占 数量最多的一类样本被称为多数类，而占数量最少的一类则称为少数类。</p>
+<h5 id="正样本和负样本"><a href="#正样本和负样本" class="headerlink" title="* 正样本和负样本"></a>* 正样本和负样本</h5><p>一种解释：在二分类数据集中，多数类简称为正类，少数类简称为负类。</p>
+<p>二种解释：一般性模型优化的定义无所谓严格区分正负样本。实际中，应该以目标为导向，如果你的目标是<strong>识别出位置错误</strong>的信息，那么你应该定义<strong>位置错误的样本</strong>是正样本，然后根据选好的数据集进行相应的优化。如果你的目标是为了<strong>识别出位置正确的样本</strong>，那你应该定义<strong>位置正确的样本</strong>是<strong>正样本</strong>。至于为什么要根据目标来定义正样本，因为你在优化损失函数的时候，是根据预测错误的正样本来进行优化的，如果你的目标定义错误的话，你的优化方向可能是反过来的，特别是对正负样本不平衡的数据集来说。</p>
+<h5 id="Concept-Drift（概念漂移）"><a href="#Concept-Drift（概念漂移）" class="headerlink" title="Concept Drift（概念漂移）"></a>Concept Drift（概念漂移）</h5><p>concept drift在机器学习、时间序列以及模式识别领域的一种<strong>现象</strong>。如果是在机器学习领域中，这个概念指的就是一个模型要去预测的一个<strong>目标变量</strong>，概念漂移就是这个目标变量随着<strong>时间</strong>的推移发生改变。概念漂移在很多领域都具有很重要的意义，例如对金融衍生品价格预测、动态控制等。</p>
+<p>目前有很多广泛存在的数据，像金融数据、交通数据等，这类数据不同于传统的static data（静态数据），而是作为一种数据量大、实时性强的data stream（流式数据）而存在。流式数据分为稳定的数据流和动态的数据流，稳定的数据流具有稳定独立同分布的特点，而动态数据流则是不独立同分布的，所以会产生概念漂移的现象。</p>
 
             </div>
             <hr />
@@ -972,7 +1019,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="深度神经网络并行化研究综述-解读">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="深度神经网络并行化研究综述-解读">
                         
                         <span class="card-title">深度神经网络并行化研究综述-解读</span>
                     </div>
@@ -991,8 +1038,8 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/论文记录/" class="post-category" target="_blank">
-                                    论文记录
+                            <a href="/categories/论文记录-综述/" class="post-category" target="_blank">
+                                    论文记录 综述
                                 </a>
                             
                             
@@ -1021,7 +1068,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="flink安装">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="flink安装">
                         
                         <span class="card-title">flink安装</span>
                     </div>
@@ -1226,7 +1273,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">7.4k</span>
+            <span class="white-color">9.6k</span>
             
 
             <br>
