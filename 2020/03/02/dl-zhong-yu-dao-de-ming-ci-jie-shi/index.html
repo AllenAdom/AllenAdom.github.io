@@ -274,7 +274,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -429,14 +429,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    3.1k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    10 Min
+                    13 Min
                 </div>
                 
                 
@@ -525,8 +525,17 @@
 <h5 id="非平衡数据"><a href="#非平衡数据" class="headerlink" title="* 非平衡数据"></a>* 非平衡数据</h5><p>非平衡数据是指数据集中某一类的<strong>样本数量明显少于其他类样本</strong>的数目，其中占 数量最多的一类样本被称为多数类，而占数量最少的一类则称为少数类。</p>
 <h5 id="正样本和负样本"><a href="#正样本和负样本" class="headerlink" title="* 正样本和负样本"></a>* 正样本和负样本</h5><p>一种解释：在二分类数据集中，多数类简称为正类，少数类简称为负类。</p>
 <p>二种解释：一般性模型优化的定义无所谓严格区分正负样本。实际中，应该以目标为导向，如果你的目标是<strong>识别出位置错误</strong>的信息，那么你应该定义<strong>位置错误的样本</strong>是正样本，然后根据选好的数据集进行相应的优化。如果你的目标是为了<strong>识别出位置正确的样本</strong>，那你应该定义<strong>位置正确的样本</strong>是<strong>正样本</strong>。至于为什么要根据目标来定义正样本，因为你在优化损失函数的时候，是根据预测错误的正样本来进行优化的，如果你的目标定义错误的话，你的优化方向可能是反过来的，特别是对正负样本不平衡的数据集来说。</p>
-<h5 id="Concept-Drift（概念漂移）"><a href="#Concept-Drift（概念漂移）" class="headerlink" title="Concept Drift（概念漂移）"></a>Concept Drift（概念漂移）</h5><p>concept drift在机器学习、时间序列以及模式识别领域的一种<strong>现象</strong>。如果是在机器学习领域中，这个概念指的就是一个模型要去预测的一个<strong>目标变量</strong>，概念漂移就是这个目标变量随着<strong>时间</strong>的推移发生改变。概念漂移在很多领域都具有很重要的意义，例如对金融衍生品价格预测、动态控制等。</p>
+<h5 id="Concept-Drift（概念漂移）"><a href="#Concept-Drift（概念漂移）" class="headerlink" title="* Concept Drift（概念漂移）"></a>* Concept Drift（概念漂移）</h5><p>concept drift在机器学习、时间序列以及模式识别领域的一种<strong>现象</strong>。如果是在机器学习领域中，这个概念指的就是一个模型要去预测的一个<strong>目标变量</strong>，概念漂移就是这个目标变量随着<strong>时间</strong>的推移发生改变。概念漂移在很多领域都具有很重要的意义，例如对金融衍生品价格预测、动态控制等。</p>
 <p>目前有很多广泛存在的数据，像金融数据、交通数据等，这类数据不同于传统的static data（静态数据），而是作为一种数据量大、实时性强的data stream（流式数据）而存在。流式数据分为稳定的数据流和动态的数据流，稳定的数据流具有稳定独立同分布的特点，而动态数据流则是不独立同分布的，所以会产生概念漂移的现象。</p>
+<h5 id="Frobenius-norm-Frobenius-范数"><a href="#Frobenius-norm-Frobenius-范数" class="headerlink" title="* Frobenius norm(Frobenius 范数)"></a>* Frobenius norm(Frobenius 范数)</h5><p>Frobenius 范数，简称F-范数，是一种矩阵范数，记为||·||<sub>F</sub>。</p>
+<p>矩阵A的<em>Frobenius范数</em>定义为矩阵A各项元素的绝对值平方的总和，即 </p>
+<p>$||A|| <em>F = \sqrt{\sum</em>{i=1}^{m} \sum_{j=1}^n|a_{ij}|^2}$</p>
+<p>可用于 利用低秩矩阵来近似单一数据矩阵。<br>用数学表示就是去找一个秩为k的矩阵B，使得矩阵B与原始数据矩阵A的差的F范数尽可能地小。</p>
+<p>即： $ B = arg \min \limits_{rank(B)=k}||A-B|| _F$</p>
+<h5 id="多目标优化问题-Pareto-Optimality"><a href="#多目标优化问题-Pareto-Optimality" class="headerlink" title="* 多目标优化问题(Pareto Optimality)"></a>* 多目标优化问题(<em>Pareto</em> <em>Optimal</em>ity)</h5><p>多目标优化一般是在pareto意义下寻求最优，这时最优解是parato frontier，不是一个点，是一个集合，这个集合里面任何点A无法<strong>dominate</strong>这个集合里面其他点B。这里说的<strong>dominate</strong>是指A无法<strong>所有的指标</strong>都比B好，这也就是多目标优化最优解的定义。如果要进一步确定到底最优的一个点是什么？那说明你要求的并不是多目标优化，你还是想找一个单目标优化，那就把所有目标函数加权吧。</p>
+<p>多目标的朴素含义是：一个人去买衣服，商场里一共有100件衣服，那自变量解集就是这100件衣服，你需要决策的是选择哪件衣服。你决策的依据是目标函数，假设这里有2个目标，目标1是衣服越便宜越好，目标2是衣服越好看越好。</p>
+<p>当然，如果你能找到一件衣服又好看又便宜，并且任何其他衣服衣服都没有他好看也没有他便宜，那问题就简单了，你就选择这一件。但是，更多的时候，问题是<strong><em>衣服A好看但是贵，衣服B没A好看但是便宜！那到底A和B哪个更好？</em></strong>其实大家逛商店买东西最纠结的不就是在于此吗？而Parato这个人聪明之处就在于捕捉了这个问题的本质并从数学上进行刻画。</p>
+<p>回到原问题，你最后可能选出来5件衣服，这5件两两之间都是上述的A与B的关系，但是对于剩下的95件，你总能找到这5件里面一件可以在价格和好看与否方面都战胜对方。因而，这5件就是最后的多目标规划的解。</p>
 
             </div>
             <hr />
@@ -1019,7 +1028,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="深度神经网络并行化研究综述-解读">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="深度神经网络并行化研究综述-解读">
                         
                         <span class="card-title">深度神经网络并行化研究综述-解读</span>
                     </div>
@@ -1068,7 +1077,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="flink安装">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="flink安装">
                         
                         <span class="card-title">flink安装</span>
                     </div>
@@ -1273,7 +1282,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">9.6k</span>
+            <span class="white-color">10.3k</span>
             
 
             <br>

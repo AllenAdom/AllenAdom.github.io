@@ -275,7 +275,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -450,12 +450,12 @@
             <div id="articleContent">
                 <h2 id="《深度神经网络并行化研究综述》"><a href="#《深度神经网络并行化研究综述》" class="headerlink" title="《深度神经网络并行化研究综述》"></a><center>《深度神经网络并行化研究综述》</center></h2><p>论文出处，点击此<a href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2018&filename=JSJX201808011&uid=WEEvREcwSlJHSldRa1Fhb09pSnNvVXIyNnJIeC92dW9MQWFIUHJCckJVST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=Mjk1NzdydkpMejdCZHJHNEg5bk1wNDlFWllSOGVYMUx1eFlTN0RoMVQzcVRyV00xRnJDVVI3cWZaT1JzRnkvbFY=" target="_blank" rel="noopener">链接</a>。</p>
 <h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>该文首先介绍了深度神经网络发展背景和常用的计算模型，然后对<strong>多核处理器、众核处理器和异构计算设备</strong>分别从功耗、计算能力、并行算法的开发难度等角度进行对比分析，接着对<strong>并行编程框架</strong>分别从支持的编程语言和硬件设备、编程难度等角度进行阐述。 然后<strong>以AlexNet为例</strong>分析了深度神经网络模型并行和数据并行两种方法的实施过程。接下来，从支持硬件、并行接口、并行模式等角度比较了常用的<strong>深度神经网络开源软件</strong>，并且通过<strong>实验比较和分析</strong>了卷积神经网 络在多核CPU和GPU上的并行性能。最后，对并行深度神经网络的未来发展趋势和面临的挑战进行<strong>展望</strong> 。</p>
-<h4 id="硬件架构"><a href="#硬件架构" class="headerlink" title="硬件架构"></a>硬件架构</h4><p>． 计算能力指标，一般使用<strong>FLOPS</strong> 即每秒执行的32位浮点(FP32) 运算次数。CPU 计算性能一般采用的指标为每秒十亿次浮点运算 （ Giga Floating Point Oprations Per Second，GFLOPS ）和每秒万亿次浮点运算（ Tera Floating Point Oprations Per Second）。</p>
+<h4 id="硬件架构"><a href="#硬件架构" class="headerlink" title="硬件架构"></a>硬件架构</h4><p>计算能力指标，一般使用<strong>FLOPS</strong> 即每秒执行的32位浮点(FP32) 运算次数。CPU 计算性能一般采用的指标为每秒十亿次浮点运算 （ Giga Floating Point Oprations Per Second，GFLOPS ）和每秒万亿次浮点运算（ Tera Floating Point Oprations Per Second）。</p>
 <h5 id="多核CPU"><a href="#多核CPU" class="headerlink" title="多核CPU"></a>多核CPU</h5><p>随着频率墙、<a href="https://zhidao.baidu.com/question/1696234362620387388.html" target="_blank" rel="noopener">功耗墙</a>和<a href="https://baike.baidu.com/item/%E5%86%85%E5%AD%98%E5%A2%99/445399?fr=aladdin" target="_blank" rel="noopener">存储墙</a>问题越来越突出，单核CPU很难继续通过提高 钟频率来提升性能， 因此具有多核结构的计算设备逐渐成为主流。多核结构指的是在同一个处理器上集成两个或两个以上的<strong>计算内核</strong>，不同计算内核之间相互独立，可以并行的执行指令。</p>
 <h5 id="GPU"><a href="#GPU" class="headerlink" title="GPU"></a>GPU</h5><p>GPU是以大量线程并行执行面向高吞吐量的设计，具有高带宽、高并行性的特点，因此GPU适用于大量数据的并行计算。</p>
-<h5 id="MIC架构-Intel-Many-Integrated-Core"><a href="#MIC架构-Intel-Many-Integrated-Core" class="headerlink" title="MIC架构(Intel Many Integrated Core)"></a>MIC架构(Intel Many Integrated Core)</h5><p>可直接参考<a href="https://www.cnblogs.com/qysqys/p/5184209.html" target="_blank" rel="noopener">链接</a>。</p>
+<h5 id="MIC架构-Intel-Many-Integrated-Core"><a href="#MIC架构-Intel-Many-Integrated-Core" class="headerlink" title="MIC架构 (Intel Many Integrated Core)"></a>MIC架构 (Intel Many Integrated Core)</h5><p>可直接参考<a href="https://www.cnblogs.com/qysqys/p/5184209.html" target="_blank" rel="noopener">链接</a>。</p>
 <h5 id="ASIC-Application-Specific-Integrated-Circuit"><a href="#ASIC-Application-Specific-Integrated-Circuit" class="headerlink" title="ASIC (Application Specific Integrated Circuit)"></a>ASIC (Application Specific Integrated Circuit)</h5><p>是指应特定用户要求和特定电子系统的需要而设计、制造的集成电路。 为了最大计算速度和最小化能量消耗，针对深度学习设计专用集成电路，并将其应用于大规模云计算数据中心和嵌入式计算设备成为热门研究方向。</p>
-<h5 id="FPGA-Field－Programmable-Gate-Array"><a href="#FPGA-Field－Programmable-Gate-Array" class="headerlink" title="FPGA(Field－Programmable Gate Array)"></a>FPGA(Field－Programmable Gate Array)</h5><p>FPGA就是一个可以通过编程来改变内部结构的芯片，在本质上是一个硬件上的可编程的器件。对比ASIC来说，因为ASIC芯片只是针对某一项功能做的专用芯片，如果要完成其他的功能就还得做一个另外的专用ASIC芯片，这样就大大的增加时间成本和人力成本，因为一个芯片的生产周期较长而且验证也是相当复杂的。FPGA就是为了解决上面的问题而出现的。</p>
+<h5 id="FPGA-Field－Programmable-Gate-Array"><a href="#FPGA-Field－Programmable-Gate-Array" class="headerlink" title="FPGA (Field－Programmable Gate Array)"></a>FPGA (Field－Programmable Gate Array)</h5><p>FPGA就是一个可以通过编程来改变内部结构的芯片，在本质上是一个硬件上的可编程的器件。对比ASIC来说，因为ASIC芯片只是针对某一项功能做的专用芯片，如果要完成其他的功能就还得做一个另外的专用ASIC芯片，这样就大大的增加时间成本和人力成本，因为一个芯片的生产周期较长而且验证也是相当复杂的。FPGA就是为了解决上面的问题而出现的。</p>
 <p><img src="%E6%88%AA%E5%B1%8F2020-03-2322.26.29.png" alt="硬件架构对比分析"></p>
 <h4 id="并行编程架构"><a href="#并行编程架构" class="headerlink" title="并行编程架构"></a>并行编程架构</h4><h5 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h5><p>运行在NVIDIA本公司GPU上的并行编程语言。</p>
 <h5 id="OpenCL"><a href="#OpenCL" class="headerlink" title="OpenCL"></a>OpenCL</h5><p>是Khronos组织制定的异构计算统一编程标准。因此可以运行在多核CPU 、 GPU、DSP、FPGA以及异构加速处理单元上。</p>
@@ -978,7 +978,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="可扩展机器学习的并行与分布式优化算法综述">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="可扩展机器学习的并行与分布式优化算法综述">
                         
                         <span class="card-title">可扩展机器学习的并行与分布式优化算法综述</span>
                     </div>
@@ -1027,7 +1027,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="DL中遇到的名词解释">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="DL中遇到的名词解释">
                         
                         <span class="card-title">DL中遇到的名词解释</span>
                     </div>
@@ -1220,7 +1220,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">9.6k</span>
+            <span class="white-color">10.3k</span>
             
 
             <br>

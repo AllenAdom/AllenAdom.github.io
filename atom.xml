@@ -105,7 +105,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2020/03/23/shen-du-shen-jing-wang-luo-bing-xing-hua-yan-jiu-zong-shu-jie-du/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2020/03/23/shen-du-shen-jing-wang-luo-bing-xing-hua-yan-jiu-zong-shu-jie-du/</id>
     <published>2020-03-23T13:24:07.000Z</published>
-    <updated>2020-03-24T06:57:18.078Z</updated>
+    <updated>2020-04-13T03:11:05.446Z</updated>
     
     <summary type="html">
     
@@ -131,7 +131,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/</id>
     <published>2020-03-02T12:52:35.000Z</published>
-    <updated>2020-04-02T09:43:42.937Z</updated>
+    <updated>2020-04-12T11:42:57.875Z</updated>
     
     <summary type="html">
     
@@ -246,7 +246,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/17/mac-kuai-jie-jian/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/17/mac-kuai-jie-jian/</id>
     <published>2019-11-17T12:21:59.000Z</published>
-    <updated>2019-11-17T14:08:24.927Z</updated>
+    <updated>2020-04-14T04:48:49.191Z</updated>
     
     <summary type="html">
     
@@ -257,8 +257,13 @@
           &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;在find中显示隐藏文件和文件夹&lt;/th&gt;
-&lt;th&gt;command + shift +
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;在finder中返回上级目录&lt;/td&gt;
+&lt;td&gt;command +
         
       
     
