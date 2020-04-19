@@ -274,7 +274,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -429,14 +429,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    3.8k
+                    4.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    13 Min
+                    15 Min
                 </div>
                 
                 
@@ -536,6 +536,80 @@
 <p>多目标的朴素含义是：一个人去买衣服，商场里一共有100件衣服，那自变量解集就是这100件衣服，你需要决策的是选择哪件衣服。你决策的依据是目标函数，假设这里有2个目标，目标1是衣服越便宜越好，目标2是衣服越好看越好。</p>
 <p>当然，如果你能找到一件衣服又好看又便宜，并且任何其他衣服衣服都没有他好看也没有他便宜，那问题就简单了，你就选择这一件。但是，更多的时候，问题是<strong><em>衣服A好看但是贵，衣服B没A好看但是便宜！那到底A和B哪个更好？</em></strong>其实大家逛商店买东西最纠结的不就是在于此吗？而Parato这个人聪明之处就在于捕捉了这个问题的本质并从数学上进行刻画。</p>
 <p>回到原问题，你最后可能选出来5件衣服，这5件两两之间都是上述的A与B的关系，但是对于剩下的95件，你总能找到这5件里面一件可以在价格和好看与否方面都战胜对方。因而，这5件就是最后的多目标规划的解。</p>
+<h5 id="半正定矩阵"><a href="#半正定矩阵" class="headerlink" title="* 半正定矩阵"></a>* 半正定矩阵</h5><p>半正定矩阵是<a href="https://baike.baidu.com/item/正定矩阵/11030459" target="_blank" rel="noopener">正定矩阵</a>的推广。实对称矩阵<em>A</em>称为半正定的，如果二次型<em>X’AX</em>半正定，即对于任意不为0的实列向量<em>X</em>，都有<em>X’AX</em>≥<em>0</em>。其中X’为X的转置。</p>
+<h5 id="矩阵英文"><a href="#矩阵英文" class="headerlink" title="* 矩阵英文"></a>* 矩阵英文</h5><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>identity matrix</td>
+<td>单位矩阵</td>
+</tr>
+<tr>
+<td>positive semi-definite matrix</td>
+<td>半正定矩阵</td>
+</tr>
+<tr>
+<td>diagonal matrix</td>
+<td>对角矩阵</td>
+</tr>
+<tr>
+<td>main diagonal</td>
+<td>主对角线</td>
+</tr>
+<tr>
+<td>projection-free</td>
+<td>免投影</td>
+</tr>
+<tr>
+<td>entity、element</td>
+<td>元素</td>
+</tr>
+<tr>
+<td>inner product; dot product; scalar product</td>
+<td>内积<sup>[1]</sup></td>
+</tr>
+<tr>
+<td>coefficient matrix</td>
+<td>系数矩阵<sup>[2]</sup></td>
+</tr>
+<tr>
+<td>dominant eigenvector</td>
+<td>主特征向量<sup>[3]</sup></td>
+</tr>
+<tr>
+<td>standard orthonormal basis</td>
+<td>标准正交基<sup>[4]</sup></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>备注：</p>
+<p>[1]: 即两向量对应位置元素相乘，再求和。</p>
+<p>[2]: 将方程组的系数组成矩阵来计算方程的解。</p>
+<p>[3]: 一个矩阵可以有多个特征值，在这些特征值中，模最大的那个特征值即主特征值（对于实数阵即绝对值最大的特征值），主特征值对应的特征向量称为主特征向量。</p>
+<p>[4]: 在线性代数中，一个<a href="https://baike.baidu.com/item/内积空间" target="_blank" rel="noopener">内积空间</a>的<strong>正交基</strong>（orthogonal basis）是元素两两正交的基。称基中的元素为<strong>基向量</strong>。假若，一个正交基的基向量的模长都是单位长度1，则称这正交基为<strong>标准正交基</strong>（Orthonormal basis）。</p>
+<h5 id="One-hot向量"><a href="#One-hot向量" class="headerlink" title="* One-hot向量"></a>* One-hot向量</h5><p>如果有多个特征，“性别”有两个特征，“尺码”：M、L、XL三个值，我们用“01”表示男性，M为“100”，L为“010”，XL为“001”，所以一个样本，【“男性”、“L”】 one-hot编码为[10 010]，一个样本也就是5维的向量，这就是one-hot形式。</p>
+<h5 id="核函数和核矩阵"><a href="#核函数和核矩阵" class="headerlink" title="* 核函数和核矩阵"></a>* 核函数和核矩阵</h5><p>令<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math.svg" alt="math">表示输入数据<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-7044286.svg" alt="math">的数据空间, 被称为<strong>输入空间</strong> (input space). <img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-1.svg" alt="math-1">是一个映射, 令<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-2.svg" alt="math-2">表示<strong>特征空间</strong> (feature space).</p>
+<ul>
+<li>数据实例<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-5.svg" alt="math-5">可以任意对象, 如文本, 序列, 图像, 字符串等;</li>
+<li>对于给定的数据实例<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-5-7044785.svg" alt="math-5">，<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-6.svg" alt="math-6">是一个向量, 被称为<strong>特征向量</strong>.</li>
+</ul>
+<p>定义<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-7.svg" alt="math-7">是<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-8-7044891.svg" alt="math-8">上的<strong>核函数</strong>为<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-9.svg" alt="math-9">上的内积运算，即：</p>
+<p><img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-10.svg" alt="math-10"></p>
+<p>令<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-3.svg" alt="math-3">为输入空间中包含 <em>n</em> 个对象的数据集，则将 <em>D</em> 中的点对间的核函数（亦称为相似度函数、或核）表示为一个<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-4.svg" alt="math-4">的<strong>核矩阵</strong>，定义为：</p>
+<p><img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-11.svg" alt="math-11"></p>
+<p>核方法避免了显式地将输入空间中的每个点<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-5-7044785.svg" alt="math-5">变换到特征空间中的映射点<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-6.svg" alt="math-6"> ，而是直接通过核矩阵来获取. 这样，所有的相关分析均可转移到对核矩阵的研究上来.当然, 核矩阵也可以看作对应 <em>n</em> 个输入点的完全图的带权邻接矩阵.</p>
+<p>注：核矩阵总是半正定矩阵。</p>
 
             </div>
             <hr />
@@ -1028,7 +1102,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="深度神经网络并行化研究综述-解读">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="深度神经网络并行化研究综述-解读">
                         
                         <span class="card-title">深度神经网络并行化研究综述-解读</span>
                     </div>
@@ -1047,8 +1121,8 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/论文记录-综述/" class="post-category" target="_blank">
-                                    论文记录 综述
+                            <a href="/categories/论文记录/" class="post-category" target="_blank">
+                                    论文记录
                                 </a>
                             
                             
@@ -1058,8 +1132,20 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/论文记录-深度神经网络-并行化/" target="_blank">
-                        <span class="chip bg-color">论文记录 深度神经网络 并行化</span>
+                    <a href="/tags/论文记录/" target="_blank">
+                        <span class="chip bg-color">论文记录</span>
+                    </a>
+                    
+                    <a href="/tags/综述/" target="_blank">
+                        <span class="chip bg-color">综述</span>
+                    </a>
+                    
+                    <a href="/tags/深度神经网络/" target="_blank">
+                        <span class="chip bg-color">深度神经网络</span>
+                    </a>
+                    
+                    <a href="/tags/并行化/" target="_blank">
+                        <span class="chip bg-color">并行化</span>
                     </a>
                     
                 </div>
@@ -1077,7 +1163,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="flink安装">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="flink安装">
                         
                         <span class="card-title">flink安装</span>
                     </div>
@@ -1282,7 +1368,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">10.3k</span>
+            <span class="white-color">11.9k</span>
             
 
             <br>
