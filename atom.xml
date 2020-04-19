@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/AllenAdom/allenwei.github.io/"/>
-  <updated>2020-04-19T15:12:06.632Z</updated>
+  <updated>2020-04-19T15:40:50.547Z</updated>
   <id>https://github.com/AllenAdom/allenwei.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2020/04/19/shi-yong-gu-ge-yun-jian-zhan-guo-cheng/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2020/04/19/shi-yong-gu-ge-yun-jian-zhan-guo-cheng/</id>
     <published>2020-04-19T10:12:04.000Z</published>
-    <updated>2020-04-19T15:12:06.632Z</updated>
+    <updated>2020-04-19T15:40:50.547Z</updated>
     
     <summary type="html">
     
@@ -126,11 +126,11 @@
     
       <category term="论文记录" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E8%AE%BA%E6%96%87%E8%AE%B0%E5%BD%95/"/>
     
+      <category term="综述" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E7%BB%BC%E8%BF%B0/"/>
+    
       <category term="机器学习" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="优化算法" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="综述" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E7%BB%BC%E8%BF%B0/"/>
     
   </entry>
   
@@ -158,11 +158,11 @@
     
       <category term="论文记录" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E8%AE%BA%E6%96%87%E8%AE%B0%E5%BD%95/"/>
     
-      <category term="综述" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E7%BB%BC%E8%BF%B0/"/>
-    
       <category term="深度神经网络" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E6%B7%B1%E5%BA%A6%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
     
       <category term="并行化" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E5%B9%B6%E8%A1%8C%E5%8C%96/"/>
+    
+      <category term="综述" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E7%BB%BC%E8%BF%B0/"/>
     
   </entry>
   
