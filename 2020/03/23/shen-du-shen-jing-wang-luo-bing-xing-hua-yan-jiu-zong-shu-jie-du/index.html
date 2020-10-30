@@ -275,7 +275,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -396,16 +396,16 @@
                             <span class="chip bg-color">论文记录</span>
                         </a>
                         
+                        <a href="/tags/综述/" target="_blank">
+                            <span class="chip bg-color">综述</span>
+                        </a>
+                        
                         <a href="/tags/深度神经网络/" target="_blank">
                             <span class="chip bg-color">深度神经网络</span>
                         </a>
                         
                         <a href="/tags/并行化/" target="_blank">
                             <span class="chip bg-color">并行化</span>
-                        </a>
-                        
-                        <a href="/tags/综述/" target="_blank">
-                            <span class="chip bg-color">综述</span>
                         </a>
                         
                     </div>
@@ -468,19 +468,19 @@
 <h5 id="MIC架构-Intel-Many-Integrated-Core"><a href="#MIC架构-Intel-Many-Integrated-Core" class="headerlink" title="MIC架构 (Intel Many Integrated Core)"></a>MIC架构 (Intel Many Integrated Core)</h5><p>可直接参考<a href="https://www.cnblogs.com/qysqys/p/5184209.html" target="_blank" rel="noopener">链接</a>。</p>
 <h5 id="ASIC-Application-Specific-Integrated-Circuit"><a href="#ASIC-Application-Specific-Integrated-Circuit" class="headerlink" title="ASIC (Application Specific Integrated Circuit)"></a>ASIC (Application Specific Integrated Circuit)</h5><p>是指应特定用户要求和特定电子系统的需要而设计、制造的集成电路。 为了最大计算速度和最小化能量消耗，针对深度学习设计专用集成电路，并将其应用于大规模云计算数据中心和嵌入式计算设备成为热门研究方向。</p>
 <h5 id="FPGA-Field－Programmable-Gate-Array"><a href="#FPGA-Field－Programmable-Gate-Array" class="headerlink" title="FPGA (Field－Programmable Gate Array)"></a>FPGA (Field－Programmable Gate Array)</h5><p>FPGA就是一个可以通过编程来改变内部结构的芯片，在本质上是一个硬件上的可编程的器件。对比ASIC来说，因为ASIC芯片只是针对某一项功能做的专用芯片，如果要完成其他的功能就还得做一个另外的专用ASIC芯片，这样就大大的增加时间成本和人力成本，因为一个芯片的生产周期较长而且验证也是相当复杂的。FPGA就是为了解决上面的问题而出现的。</p>
-<p><img src="%E6%88%AA%E5%B1%8F2020-03-2322.26.29.png" alt="硬件架构对比分析"></p>
+<p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/23/shen-du-shen-jing-wang-luo-bing-xing-hua-yan-jiu-zong-shu-jie-du/%E6%88%AA%E5%B1%8F2020-03-2322.26.29.png" alt="硬件架构对比分析"></p>
 <h4 id="并行编程架构"><a href="#并行编程架构" class="headerlink" title="并行编程架构"></a>并行编程架构</h4><h5 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h5><p>运行在NVIDIA本公司GPU上的并行编程语言。</p>
 <h5 id="OpenCL"><a href="#OpenCL" class="headerlink" title="OpenCL"></a>OpenCL</h5><p>是Khronos组织制定的异构计算统一编程标准。因此可以运行在多核CPU 、 GPU、DSP、FPGA以及异构加速处理单元上。</p>
 <h5 id="OpenMP"><a href="#OpenMP" class="headerlink" title="OpenMP"></a>OpenMP</h5><p>是基于<strong>共享内存</strong>和<strong>多线程</strong>的并行编程模型，在使用时需要程序员在程序可用于并行的部分添加并行编译的关键字，运行环境依据关键字将计算任务映射到多线程上并行执行。</p>
 <h5 id="MPI"><a href="#MPI" class="headerlink" title="MPI"></a>MPI</h5><p>是一种基于消息传递的并行程序编程框架。作为一个跨语言的通讯协议，MPI支持点对点和广播两种通讯方式。但是基于MPI 的并行程序通常在算法上有较大改动，编程难度较大， 并且容错性不足，如果一个进程出现问题导致整个 应用需要重新进行计算。</p>
 <h4 id="深度神经网络的模型并行和数据并行"><a href="#深度神经网络的模型并行和数据并行" class="headerlink" title="深度神经网络的模型并行和数据并行"></a>深度神经网络的模型并行和数据并行</h4><h5 id="模型并行"><a href="#模型并行" class="headerlink" title="模型并行"></a>模型并行</h5><p>模型并行（图5（a））是指将网络模型分解到各个计算设备上， 依靠设备间的共同协作完成训练。多数情况下，模型并行带来的<strong>通信开销和同步开销</strong>超过数据并行，因此加速比也不及数据并行， 但是对于单个计算设备内存无 法 容纳的大 模型来 说，模型并行是一个很好的选择。</p>
 <h5 id="数据并行"><a href="#数据并行" class="headerlink" title="数据并行"></a>数据并行</h5><p>数据并行（图5（b））是指对训练数据做切分，同时采用多个模型实例，对多个分片的数据并行训练，由参数服务器来完成参数交换。在训练过程中，多个训练过程相互独 立，模型的变化量 Δｗ 需要传输给参数服务器， 由参数服务器负责更新为最新的模型 <em>ｗ′＝ｗ － η  · Δｗ</em>,其中<em>η</em>为学习率，然后再将最新的模型<em>ｗ′</em> 分发给训练程序。</p>
-<p><img src="%E6%88%AA%E5%B1%8F2020-03-2322.43.10.png" alt="模型并行和数据并行"></p>
+<p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/23/shen-du-shen-jing-wang-luo-bing-xing-hua-yan-jiu-zong-shu-jie-du/%E6%88%AA%E5%B1%8F2020-03-2322.43.10.png" alt="模型并行和数据并行"></p>
 <h5 id="随机梯度下降法"><a href="#随机梯度下降法" class="headerlink" title="随机梯度下降法"></a>随机梯度下降法</h5><p>在深度神经网络中，为了求解代价函数，需要使用优化算法。目前最常用的优化算法是梯度下降法。该算法的核心是最小化目标函数，在每次迭代中，对每个变量按照目标函数在该变量梯度的相反方向更新对应的参数值，其中，参数学习率决定了函数到达最小值的迭代次数。</p>
 <p>随机梯度下降算法（SGD）由于 速度快、效果可靠等优点在深度神经网络算法中得到了普遍应用。目前主要有同步 SGD和异步SGD两种机制。． 同步SGD需要利用所有节点上的参数信息，而慢节点所带来的同步 等待使得数据并行时的加速比并不理想。SGD异步虽然单次训练速度快，但是其固有的随机性使得网 络在训练过程中达到相同收敛点耗费的时间更长，且在训练后期可能会出现震荡现象。针对两者，论文中提到了有学者提出了相应<strong>缓解</strong>方法。</p>
 <h4 id="深度神经网络开源软件系统并行化方法"><a href="#深度神经网络开源软件系统并行化方法" class="headerlink" title="深度神经网络开源软件系统并行化方法"></a>深度神经网络开源软件系统并行化方法</h4><p>Caffe、TensorFlow、MXNet、CNTK、PTorch、Theano这些软件对深度神经网络并行时使用了一些 相 似 的方法，在CPU上都使用了高性能多线程库来对网络进行训练，GPU在上都支持cuDNN（对CNN做一些GPU矩阵计算的优化）来对网络进行加速。在分布式并行深度神经网络的实现上，使用了数据并行或模型并行。</p>
 <p><strong>论文中</strong>对上述软件都做了简要分析。</p>
-<p><img src="%E6%88%AA%E5%B1%8F2020-03-2323.03.29.png" alt="分析表"></p>
+<p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/23/shen-du-shen-jing-wang-luo-bing-xing-hua-yan-jiu-zong-shu-jie-du/%E6%88%AA%E5%B1%8F2020-03-2323.03.29.png" alt="分析表"></p>
 <h4 id="深度神经网络并行化研究现状"><a href="#深度神经网络并行化研究现状" class="headerlink" title="深度神经网络并行化研究现状"></a>深度神经网络并行化研究现状</h4><h5 id="GPU-1"><a href="#GPU-1" class="headerlink" title="GPU"></a>GPU</h5><p>使用GPU来加速深度神经网络算法的训练过 程，一 般是使用CUDA或OpenCL将算法移植在GPU上，通过数据并行或模型并行，或者采用两者相结合的方法并行加速。</p>
 <h5 id="MIC"><a href="#MIC" class="headerlink" title="MIC"></a>MIC</h5><p>使用MIC对深度神经网络训练过程并行加速时，一般使用OpenMP并行编程语言。将算法中的循环部分通过OpenMP和向量化指令做多线程和SIMD并行。</p>
 <h5 id="ASIC"><a href="#ASIC" class="headerlink" title="ASIC"></a>ASIC</h5><p>设计专用加速器时，一般是通过分析算法特性，为其设计相应的硬件电路，充分利用算法中可并行的部分，为其中相应的操作分配具体的计算元件，从而获得更高的加速效果。</p>
@@ -990,7 +990,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="可扩展机器学习的并行与分布式优化算法综述">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="可扩展机器学习的并行与分布式优化算法综述">
                         
                         <span class="card-title">可扩展机器学习的并行与分布式优化算法综述</span>
                     </div>
@@ -1024,16 +1024,16 @@
                         <span class="chip bg-color">论文记录</span>
                     </a>
                     
-                    <a href="/tags/综述/" target="_blank">
-                        <span class="chip bg-color">综述</span>
-                    </a>
-                    
                     <a href="/tags/机器学习/" target="_blank">
                         <span class="chip bg-color">机器学习</span>
                     </a>
                     
                     <a href="/tags/优化算法/" target="_blank">
                         <span class="chip bg-color">优化算法</span>
+                    </a>
+                    
+                    <a href="/tags/综述/" target="_blank">
+                        <span class="chip bg-color">综述</span>
                     </a>
                     
                 </div>
@@ -1051,7 +1051,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="DL中遇到的名词解释">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="DL中遇到的名词解释">
                         
                         <span class="card-title">DL中遇到的名词解释</span>
                     </div>
@@ -1244,7 +1244,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.1k</span>
+            <span class="white-color">14.7k</span>
             
 
             <br>
@@ -1376,8 +1376,7 @@ $(function () {
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
 
-    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
-    </script>
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 

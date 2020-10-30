@@ -274,7 +274,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -429,14 +429,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    4.4k
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    15 Min
+                    16 Min
                 </div>
                 
                 
@@ -448,23 +448,23 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="Let’s-start-！"><a href="#Let’s-start-！" class="headerlink" title="Let’s start ！"></a>Let’s start ！</h3><h5 id="先验分布"><a href="#先验分布" class="headerlink" title="* 先验分布"></a>* 先验分布</h5><p>   先验分布（prior distribution）一译“验前分布”“事前分布”。是概率分布的一种。与“后验分布”相对。与试验结果无关，或与随机抽样无关，反映在进行统计试验之前根据其他有关参数口的知识而得到的分布。</p>
-<h5 id="参数-超参数"><a href="#参数-超参数" class="headerlink" title="* 参数 超参数"></a>* 参数 超参数</h5><p><img src="%E6%88%AA%E5%B1%8F2020-03-0221.01.39.png" alt="参数和超参数"></p>
+<h5 id="参数-超参数"><a href="#参数-超参数" class="headerlink" title="* 参数 超参数"></a>* 参数 超参数</h5><p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/%E6%88%AA%E5%B1%8F2020-03-0221.01.39.png" alt="参数和超参数"></p>
 <h5 id="如何理解向量空间"><a href="#如何理解向量空间" class="headerlink" title="* 如何理解向量空间"></a>* 如何理解向量空间</h5><p>  容纳运动是空间的本质特征，“空间”是容纳运动的一个对象集合，而变换则规定了对应空间的运动。所以说，向量空间也是一个集合，这个集合对向量的加法和数乘是封闭的，也就是说，只要向量在这个空间内，那么向量按照加法和数乘的方式运动，就会一直在这个空间里。所以，对加法和数乘运算封闭的向量空间也称为线性空间。</p>
-<h5 id="在GAN网络中，潜在空间-latent-space"><a href="#在GAN网络中，潜在空间-latent-space" class="headerlink" title="* 在GAN网络中，潜在空间 (latent space)"></a>* 在GAN网络中，潜在空间 (latent space)</h5><p><img src="%E6%88%AA%E5%B1%8F2020-03-0221.22.26.png" alt="lanten space"></p>
+<h5 id="在GAN网络中，潜在空间-latent-space"><a href="#在GAN网络中，潜在空间-latent-space" class="headerlink" title="* 在GAN网络中，潜在空间 (latent space)"></a>* 在GAN网络中，潜在空间 (latent space)</h5><p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/%E6%88%AA%E5%B1%8F2020-03-0221.22.26.png" alt="lanten space"></p>
 <h5 id="BatchNorm"><a href="#BatchNorm" class="headerlink" title="* BatchNorm"></a>* BatchNorm</h5><p>  我们都知道，深度学习的话尤其是在CV上都需要对数据做归一化，因为深度神经网络主要就是为了学习训练数据的分布，并在测试集上达到很好的泛化效果，但是，如果我们每一个batch输入的数据都具有不同的分布，显然会给网络的训练带来困难。另一方面，数据经过一层层网络计算后，其数据分布也在发生着变化，此现象称为<em>Internal Covariate Shift</em>，接下来会详细解释，会给下一层的网络学习带来困难。<em>batch norm</em>直译过来就是批规范化，就是为了解决这个分布变化问题。</p>
 <p>详情可参考<a href="https://blog.csdn.net/qq_25737169/article/details/79048516" target="_blank" rel="noopener">batchnorm原理及代码详解</a></p>
 <h5 id="正交规范化-（orthogonal-regulatization）"><a href="#正交规范化-（orthogonal-regulatization）" class="headerlink" title="* 正交规范化 （orthogonal regulatization）"></a>* 正交规范化 （orthogonal regulatization）</h5><p>正交阵的一个条件是：<em>W<sup>T</sup>W=I</em>  其中，<em>W</em>就是正交阵，<em>I</em>是单位阵。</p>
 <p>正交阵的好处是，<strong>如果一个矩阵与一个正交阵相乘，这个矩阵的范数不会变化</strong>。保证范数就可以缓解梯度消失和爆炸。<a href="https://blog.csdn.net/qq_27261889/article/details/86608525" target="_blank" rel="noopener">参考</a></p>
 <h5 id="谱归一化-（Spectral-Normalization）"><a href="#谱归一化-（Spectral-Normalization）" class="headerlink" title="* 谱归一化 （Spectral Normalization）"></a>* 谱归一化 （Spectral Normalization）</h5><p>  在GAN中，<strong>判别器训练越好，生成器梯度消失越严重。</strong>Spectral Norm使用一种更优雅的方式使得判别器 <em>D</em> 满足利普希茨连续性，限制了函数变化的剧烈程度，从而使模型更稳定。<a href="https://blog.csdn.net/StreamRock/article/details/83590347" target="_blank" rel="noopener">参考</a></p>
 <h5 id="训练误差和泛化误差"><a href="#训练误差和泛化误差" class="headerlink" title="* 训练误差和泛化误差"></a>* 训练误差和泛化误差</h5><p>机器学习在训练数据集上表现出的误差叫训练误差；在任意测试数据集上表现出来的<strong>误差的期望值</strong>叫做泛化误差。</p>
-<h5 id="欠拟合和过拟合"><a href="#欠拟合和过拟合" class="headerlink" title="* 欠拟合和过拟合"></a>* 欠拟合和过拟合</h5><p><img src="%E6%88%AA%E5%B1%8F2020-03-1010.36.55.png" alt="欠拟合和过拟合"></p>
+<h5 id="欠拟合和过拟合"><a href="#欠拟合和过拟合" class="headerlink" title="* 欠拟合和过拟合"></a>* 欠拟合和过拟合</h5><p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/%E6%88%AA%E5%B1%8F2020-03-1010.36.55.png" alt="欠拟合和过拟合"></p>
 <h5 id="Softmax"><a href="#Softmax" class="headerlink" title="* Softmax"></a>* Softmax</h5><p>我们知道max，假如说我有两个数，a和b，并且a&gt;b，如果取max，那么就直接取a，没有第二种可能。但有的时候我不想这样，因为这样会造成分值小的那个饥饿。所以我希望分值大的那一项经常取到，分值小的那一项也偶尔可以取到，那么我用softmax就可以了。</p>
 <p> 现在还是a和b，a&gt;b，如果我们取按照softmax来计算取a和b的概率，那a的softmax值大于b的，所以a会经常取到，而b也会偶尔取到，概率跟它们本来的大小有关。所以说不是max，而是*<em>Soft *</em>max。</p>
 <p><em>SVM只选自己喜欢的男神，Softmax把所有备胎全部拉出来评分，最后还归一化一下</em></p>
 <h5 id="激活函数"><a href="#激活函数" class="headerlink" title="* 激活函数"></a>* 激活函数</h5><ol>
 <li><p>什么是激活函数</p>
 <p>首先要了解神经网络的基本模型。单一神经元模型如下图所示：</p>
-<p><img src="20170107175151314.jpeg" alt="神经元"></p>
+<p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/20170107175151314.jpeg" alt="神经元"></p>
 <p>神经网络中的每个神经元节点接受上一层神经元的输出值作为本神经元的输入值，并将输入值传递给下一层，输入层神经元节点会将输入属性值直接传递给下一层（隐层或输出层）。在多层神经网络中，上层节点的输出和下层节点的输入之间具有一个函数关系，这个函数称为激活函数（又称激励函数）。</p>
 </li>
 <li><p>激活函数的用途（为什么需要激活函数）？</p>
@@ -475,8 +475,8 @@
 </li>
 </ol>
 <h5 id="目标函数、损失函数、代价函数"><a href="#目标函数、损失函数、代价函数" class="headerlink" title="* 目标函数、损失函数、代价函数"></a>* 目标函数、损失函数、代价函数</h5><p>损失函数（loss function）和代价函数（cost function）是同一个东西，目标函数是一个与他们相关但更广的概念，对于目标函数来说在有约束条件下的最小化就是损失函数。</p>
-<h5 id="正则化和正则化率"><a href="#正则化和正则化率" class="headerlink" title="* 正则化和正则化率"></a>* 正则化和正则化率</h5><p><img src="%E6%88%AA%E5%B1%8F2020-03-1012.26.09.png" alt="正则化和正则化率"></p>
-<p><img src="%E6%88%AA%E5%B1%8F2020-03-1012.32.08.png" alt="L1和L2"></p>
+<h5 id="正则化和正则化率"><a href="#正则化和正则化率" class="headerlink" title="* 正则化和正则化率"></a>* 正则化和正则化率</h5><p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/%E6%88%AA%E5%B1%8F2020-03-1012.26.09.png" alt="正则化和正则化率"></p>
+<p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/%E6%88%AA%E5%B1%8F2020-03-1012.32.08.png" alt="L1和L2"></p>
 <h5 id="什么是dropout"><a href="#什么是dropout" class="headerlink" title="* 什么是dropout"></a>* 什么是dropout</h5><p>dropout是指在深度学习网络的训练过程中，对于神经网络单元，按照一定的概率将其暂时从网络中丢弃。注意是暂时，对于随机梯度下降来说，由于是随机丢弃，故而每一个mini-batch都在训练不同的网络。</p>
 <h5 id="Boosting-Algorithm"><a href="#Boosting-Algorithm" class="headerlink" title="* Boosting Algorithm"></a>* Boosting Algorithm</h5><p>提升方法是基于这样一种思想：对于一个复杂任务来说，将多个专家的判断进行适当的综合所得出的判断，要比其中任何一个专家单独的判断好。通俗点说，就是”三个臭皮匠顶个诸葛亮”。</p>
 <p><a href="https://www.cnblogs.com/linyuanzhou/p/5019166.html" target="_blank" rel="noopener">可参考</a></p>
@@ -510,7 +510,7 @@
 <li><p><strong>输出矩阵的通道数</strong>（out depth）由<strong>卷积核的输出通道数</strong>所决定。（绿色标注）</p>
 </li>
 <li><p><strong>输出矩阵的高度和宽度</strong>（height, width）这两个维度的尺寸由输入矩阵、卷积核、扫描方式所共同决定。计算公式如下。（蓝色标注)</p>
-<p><img src="equation-5053801.svg" alt="输出矩阵的高度和宽度计算公式"></p>
+<p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/equation-5053801.svg" alt="输出矩阵的高度和宽度计算公式"></p>
 <p><font color="gray">* 注：以下计算演示均省略掉了 Bias ，严格来说其实每个卷积核都还有一个 Bias 参数。</font></p>
 </li>
 </ul>
@@ -519,7 +519,7 @@
 <h6 id="标准卷积计算举例"><a href="#标准卷积计算举例" class="headerlink" title="标准卷积计算举例"></a>标准卷积计算举例</h6><blockquote>
 <p>以 AlexNet 模型的第一个卷积层为例，<br>- 输入图片的尺寸统一为 227 x 227 x 3 （高度 x 宽度 x 颜色通道数），<br>- 本层一共具有96个卷积核，<br>- 每个卷积核的尺寸都是 11 x 11 x 3。<br>- 已知 stride = 4， padding = 0，<br>- 假设 batch_size = 256，<br>- 则输出矩阵的高度/宽度为 (227 - 11) / 4 + 1 = 55</p>
 </blockquote>
-<p><img src="equation-1.svg" alt="标准卷积计算举例"></p>
+<p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/equation-1.svg" alt="标准卷积计算举例"></p>
 <h5 id="heuristic-based-method"><a href="#heuristic-based-method" class="headerlink" title="* heuristic-based method"></a>* heuristic-based method</h5><p>什么叫启发式的方法，就是经验论，根据经验规则进行发现的方法。</p>
 <h5 id="集成学习-Ensemble-learing"><a href="#集成学习-Ensemble-learing" class="headerlink" title="* 集成学习(Ensemble learing)"></a>* 集成学习(Ensemble learing)</h5><p>集成学习算法是机器学习的一种新的学 习思想，该学习算法把同一个问题分解到多个不同的模块中，由多个学习器一起参与 学习，共同解决目标问题，从而提高分类器的泛化能力。</p>
 <h5 id="非平衡数据"><a href="#非平衡数据" class="headerlink" title="* 非平衡数据"></a>* 非平衡数据</h5><p>非平衡数据是指数据集中某一类的<strong>样本数量明显少于其他类样本</strong>的数目，其中占 数量最多的一类样本被称为多数类，而占数量最少的一类则称为少数类。</p>
@@ -585,8 +585,8 @@
 <td>标准正交基<sup>[4]</sup></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>eigenvalue</td>
+<td>奇异值</td>
 </tr>
 <tr>
 <td></td>
@@ -599,17 +599,22 @@
 <p>[3]: 一个矩阵可以有多个特征值，在这些特征值中，模最大的那个特征值即主特征值（对于实数阵即绝对值最大的特征值），主特征值对应的特征向量称为主特征向量。</p>
 <p>[4]: 在线性代数中，一个<a href="https://baike.baidu.com/item/内积空间" target="_blank" rel="noopener">内积空间</a>的<strong>正交基</strong>（orthogonal basis）是元素两两正交的基。称基中的元素为<strong>基向量</strong>。假若，一个正交基的基向量的模长都是单位长度1，则称这正交基为<strong>标准正交基</strong>（Orthonormal basis）。</p>
 <h5 id="One-hot向量"><a href="#One-hot向量" class="headerlink" title="* One-hot向量"></a>* One-hot向量</h5><p>如果有多个特征，“性别”有两个特征，“尺码”：M、L、XL三个值，我们用“01”表示男性，M为“100”，L为“010”，XL为“001”，所以一个样本，【“男性”、“L”】 one-hot编码为[10 010]，一个样本也就是5维的向量，这就是one-hot形式。</p>
-<h5 id="核函数和核矩阵"><a href="#核函数和核矩阵" class="headerlink" title="* 核函数和核矩阵"></a>* 核函数和核矩阵</h5><p>令<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math.svg" alt="math">表示输入数据<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-7044286.svg" alt="math">的数据空间, 被称为<strong>输入空间</strong> (input space). <img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-1.svg" alt="math-1">是一个映射, 令<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-2.svg" alt="math-2">表示<strong>特征空间</strong> (feature space).</p>
+<h5 id="核函数和核矩阵"><a href="#核函数和核矩阵" class="headerlink" title="* 核函数和核矩阵"></a>* 核函数和核矩阵</h5><p>令 <em>I</em> 表示输入数据 <em>x</em> 的数据空间, 被称为<strong>输入空间</strong> (input space).  $ \phi$ 是一个映射, 令 $F = {\phi(x):x \in I}$ 表示<strong>特征空间</strong> (feature space).</p>
 <ul>
-<li>数据实例<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-5.svg" alt="math-5">可以任意对象, 如文本, 序列, 图像, 字符串等;</li>
-<li>对于给定的数据实例<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-5-7044785.svg" alt="math-5">，<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-6.svg" alt="math-6">是一个向量, 被称为<strong>特征向量</strong>.</li>
+<li>数据实例 <em>x</em> 可以任意对象, 如文本, 序列, 图像, 字符串等;</li>
+<li>对于给定的数据实例 <em>x</em> ，$ \phi(x)$是一个向量, 被称为<strong>特征向量</strong>.</li>
 </ul>
-<p>定义<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-7.svg" alt="math-7">是<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-8-7044891.svg" alt="math-8">上的<strong>核函数</strong>为<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-9.svg" alt="math-9">上的内积运算，即：</p>
-<p><img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-10.svg" alt="math-10"></p>
-<p>令<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-3.svg" alt="math-3">为输入空间中包含 <em>n</em> 个对象的数据集，则将 <em>D</em> 中的点对间的核函数（亦称为相似度函数、或核）表示为一个<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-4.svg" alt="math-4">的<strong>核矩阵</strong>，定义为：</p>
-<p><img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-11.svg" alt="math-11"></p>
-<p>核方法避免了显式地将输入空间中的每个点<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-5-7044785.svg" alt="math-5">变换到特征空间中的映射点<img src="DL%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/math-6.svg" alt="math-6"> ，而是直接通过核矩阵来获取. 这样，所有的相关分析均可转移到对核矩阵的研究上来.当然, 核矩阵也可以看作对应 <em>n</em> 个输入点的完全图的带权邻接矩阵.</p>
+<p>定义 $K:I \times I \rightarrow R$是 <em>I</em> 上的<strong>核函数</strong>为 $F$ 上的内积运算，即：</p>
+<p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/math-10.svg" alt="math-10"></p>
+<p>令$D={x _i}{^n _{i=1}} \subset I$ 输入空间中包含 <em>n</em> 个对象的数据集，则将 <em>D</em> 中的点对间的核函数（亦称为相似度函数、或核）表示为一个的 $n \times n$ <strong>核矩阵</strong>，定义为：</p>
+<p><img src="//github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/math-11.svg" alt="math-11"></p>
+<p>核方法避免了显式地将输入空间中的每个点 <em>x</em> 变换到特征空间中的映射点$ \phi(x)$ ，而是直接通过核矩阵来获取。这样，所有的相关分析均可转移到对核矩阵的研究上来。当然, 核矩阵也可以看作对应 <em>n</em> 个输入点的完全图的带权邻接矩阵。</p>
 <p>注：核矩阵总是半正定矩阵。</p>
+<h5 id="奇异值和特征值"><a href="#奇异值和特征值" class="headerlink" title="奇异值和特征值"></a>奇异值和特征值</h5><h6 id="特征值"><a href="#特征值" class="headerlink" title="特征值"></a>特征值</h6><p>特征向量的代数上含义是：将矩阵乘法转换为数乘操作；</p>
+<p>特征向量的几何含义是：特征向量通过方阵A变换只进行伸缩，而保持特征向量的方向不变。特征值表示的是这个特征到底有多重要</p>
+<p><font color="gray"> 注：矩阵的特征值要求矩阵是非奇异矩阵（即方阵且行列式的值不为零）</font></p>
+<h6 id="奇异值"><a href="#奇异值" class="headerlink" title="奇异值"></a>奇异值</h6><p>特征值及特征值分解都是针对方阵而言，现实世界中，我们看到的大部分矩阵不是方阵，比如每道数据有M个点，一共采集了N道数据，这样就形成了一个N<em>M的矩阵，那么怎样才能像方阵一样提取出它的特征，以及特征的重要性。奇异值分解就是来干这个事情的。*</em>奇异值相当于方阵中的特征值，奇异值分解相当于方阵中的特征值分解。**</p>
+<p>奇异值分解（SVD）是一种适用于任意矩阵的分解方法。</p>
 
             </div>
             <hr />
@@ -1102,7 +1107,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="深度神经网络并行化研究综述-解读">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="深度神经网络并行化研究综述-解读">
                         
                         <span class="card-title">深度神经网络并行化研究综述-解读</span>
                     </div>
@@ -1136,16 +1141,16 @@
                         <span class="chip bg-color">论文记录</span>
                     </a>
                     
+                    <a href="/tags/综述/" target="_blank">
+                        <span class="chip bg-color">综述</span>
+                    </a>
+                    
                     <a href="/tags/深度神经网络/" target="_blank">
                         <span class="chip bg-color">深度神经网络</span>
                     </a>
                     
                     <a href="/tags/并行化/" target="_blank">
                         <span class="chip bg-color">并行化</span>
-                    </a>
-                    
-                    <a href="/tags/综述/" target="_blank">
-                        <span class="chip bg-color">综述</span>
                     </a>
                     
                 </div>
@@ -1163,7 +1168,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="flink安装">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="flink安装">
                         
                         <span class="card-title">flink安装</span>
                     </div>
@@ -1368,7 +1373,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.1k</span>
+            <span class="white-color">14.7k</span>
             
 
             <br>
@@ -1500,8 +1505,7 @@ $(function () {
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
 
-    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
-    </script>
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 

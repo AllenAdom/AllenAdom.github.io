@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/AllenAdom/allenwei.github.io/"/>
-  <updated>2020-04-19T15:40:50.547Z</updated>
+  <updated>2020-10-30T13:28:32.910Z</updated>
   <id>https://github.com/AllenAdom/allenwei.github.io/</id>
   
   <author>
@@ -15,6 +15,92 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode_哈希查找</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2020/10/30/leetcode-ha-xi-cha-zhao/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2020/10/30/leetcode-ha-xi-cha-zhao/</id>
+    <published>2020-10-30T12:25:39.000Z</published>
+    <updated>2020-10-30T13:28:32.910Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;哈希查找&quot;&gt;&lt;a href=&quot;#哈希查找&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="LeetCode" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/LeetCode/"/>
+    
+    
+      <category term="LeetCode" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/LeetCode/"/>
+    
+      <category term="哈希查找" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E5%93%88%E5%B8%8C%E6%9F%A5%E6%89%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>是好看的句子啊</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2020/05/27/shi-hao-kan-de-ju-zi-a/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2020/05/27/shi-hao-kan-de-ju-zi-a/</id>
+    <published>2020-05-27T07:15:44.000Z</published>
+    <updated>2020-05-27T07:32:21.295Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;我生来平平淡淡，没有显赫家世，没有倾城面貌。惊艳不了青春，斑驳不了岁月。可我依然想温暖时光，饱读诗书，努力弥补我这平淡出生，后期绚烂绽放。&lt;/li&gt;
+&lt;li&gt;来日方长要在不慌不忙中学会坚强。&lt;/li&gt;
+&lt;li&gt;这个世界太危险，时间就该浪费在美好的事物上。&lt;/li
+        
+      
+    
+    </summary>
+    
+      <category term="摘抄" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/%E6%91%98%E6%8A%84/"/>
+    
+    
+      <category term="摘抄" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E6%91%98%E6%8A%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="https://github.com/AllenAdom/allenwei.github.io/2020/04/21/linux-chang-yong-ming-ling/"/>
+    <id>https://github.com/AllenAdom/allenwei.github.io/2020/04/21/linux-chang-yong-ming-ling/</id>
+    <published>2020-04-21T11:12:13.000Z</published>
+    <updated>2020-07-03T13:59:14.837Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Linux命令总结&quot;&gt;&lt;a href=&quot;#Linux命令总结&quot; class=&quot;headerlink&quot; title=&quot;Linux命令总结&quot;&gt;&lt;/a&gt;Linux命令总结&lt;/h1&gt;&lt;p&gt;本文所有命令都记录于在CentOS 7&lt;/p&gt;
+&lt;h2 id=&quot;系统命令&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/Linux/"/>
+    
+      <category term="技巧" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/Linux/%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="Linux" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>使用谷歌云建站过程</title>
@@ -38,9 +124,9 @@
       <category term="VPS" scheme="https://github.com/AllenAdom/allenwei.github.io/categories/VPS/"/>
     
     
-      <category term="VPS" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/VPS/"/>
-    
       <category term="Linux" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/Linux/"/>
+    
+      <category term="VPS" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/VPS/"/>
     
   </entry>
   
@@ -126,11 +212,11 @@
     
       <category term="论文记录" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E8%AE%BA%E6%96%87%E8%AE%B0%E5%BD%95/"/>
     
-      <category term="综述" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E7%BB%BC%E8%BF%B0/"/>
-    
       <category term="机器学习" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="优化算法" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="综述" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E7%BB%BC%E8%BF%B0/"/>
     
   </entry>
   
@@ -158,11 +244,11 @@
     
       <category term="论文记录" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E8%AE%BA%E6%96%87%E8%AE%B0%E5%BD%95/"/>
     
+      <category term="综述" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E7%BB%BC%E8%BF%B0/"/>
+    
       <category term="深度神经网络" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E6%B7%B1%E5%BA%A6%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
     
       <category term="并行化" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E5%B9%B6%E8%A1%8C%E5%8C%96/"/>
-    
-      <category term="综述" scheme="https://github.com/AllenAdom/allenwei.github.io/tags/%E7%BB%BC%E8%BF%B0/"/>
     
   </entry>
   
@@ -171,7 +257,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2020/03/02/dl-zhong-yu-dao-de-ming-ci-jie-shi/</id>
     <published>2020-03-02T12:52:35.000Z</published>
-    <updated>2020-04-17T08:17:25.208Z</updated>
+    <updated>2020-04-21T12:27:16.542Z</updated>
     
     <summary type="html">
     
@@ -197,7 +283,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2019/12/13/flink-an-zhuang/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2019/12/13/flink-an-zhuang/</id>
     <published>2019-12-13T07:16:51.000Z</published>
-    <updated>2019-12-13T08:13:33.122Z</updated>
+    <updated>2020-04-30T07:39:09.779Z</updated>
     
     <summary type="html">
     
@@ -350,7 +436,7 @@
     <link href="https://github.com/AllenAdom/allenwei.github.io/2019/11/15/typora-shi-yong-ji-qiao/"/>
     <id>https://github.com/AllenAdom/allenwei.github.io/2019/11/15/typora-shi-yong-ji-qiao/</id>
     <published>2019-11-15T08:18:31.000Z</published>
-    <updated>2020-04-05T14:13:34.231Z</updated>
+    <updated>2020-04-20T04:03:10.217Z</updated>
     
     <summary type="html">
     
